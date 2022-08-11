@@ -1,0 +1,9 @@
+$ ./mario
+Prompt user for a positive integer
+    If integer is 1 </ x </ 8
+        Print height: [positive integer]
+        Generate pyramid with height of positive integer
+    Else
+        Go back to line 2
+    Else
+        Quit
