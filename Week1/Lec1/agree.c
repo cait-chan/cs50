@@ -16,3 +16,6 @@ int main(void)
         printf("Not agreed.\n");
     }
 }
+// If using single characters (chars), use single quotes
+// If a string (even single character in a string) use
+// double quotes
