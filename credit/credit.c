@@ -10,6 +10,7 @@ int main(void)
     //Checksum
     long checksum = credit % 100 * 2
 
+
     if ()
         printf("AMEX\n");
     else if ()
@@ -22,5 +23,5 @@ int main(void)
 
 long checksum(long credit)
 {
-    
+
 }
