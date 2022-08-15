@@ -18,6 +18,7 @@ int main(void)
         {
             printf(" ");
         }
+        //This prints the first pyramid
         for (int k = 0; k <= i; k++)
         {
             printf("#");
@@ -26,10 +27,12 @@ int main(void)
         {
             printf(" ");
         }
+        //This prints the second pyramid
         for (int m = 0; m <= i; m++)
         {
             printf("#");
         }
+        //New line
         printf("\n");
     }
 }
