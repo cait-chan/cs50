@@ -21,6 +21,7 @@ int main(void)
         {
             printf("#");
         }
+        for (int l = 0; l<)
         {
             printf("\n");
         }
