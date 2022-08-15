@@ -7,7 +7,7 @@ int main(void)
     int height;
     do
     {
-        int height = get_int("Enter a positive integer between 1 and 8. ");
+        height = get_int("Enter a positive integer between 1 and 8. ");
     }
     while (height < 1 || height > 8);
 
@@ -15,7 +15,7 @@ int main(void)
     {
         for (int j = i + 2; j <= height; j++)
             {
-                printf(".");
+                printf(" ");
             }
         for (int k = 0; k <= i; k++)
         {
@@ -23,13 +23,12 @@ int main(void)
         }
         for (int l = 0; l < 2; l++)
         {
-            printf(".");
+            printf(" ");
         }
         for (int m = 0; m <= i; m++)
         {
             printf("#");
         }
             printf("\n");
-        }
     }
 }
