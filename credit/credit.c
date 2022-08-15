@@ -1,6 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
+long checksum(void);
+
 int main(void)
 {
     long credit = get_long("Credit card number: ");
@@ -16,4 +18,9 @@ int main(void)
         printf("VISA\n");
     else
         printf("INVALID\n");
+}
+
+long checksum(void)
+{
+    
 }
