@@ -6,5 +6,5 @@ int main(void)
     long credit = get_long("Credit card number: ");
 
     //Checksum
-    
+    long checksum = credit % 100 * 2
 }
