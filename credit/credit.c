@@ -1,27 +1,19 @@
 #include <cs50.h>
 #include <stdio.h>
 
-long checksum(void);
+long checksum(long credit);
 
 int main(void)
 {
     long credit = get_long("Credit card number: ");
 
     //Checksum
-    long checksum = credit % 100 * 2
+    int answer = checksum(credit);
+    printf("Checksum: %i\n", answer);
 
-
-    if ()
-        printf("AMEX\n");
-    else if ()
-        printf("MASTERCARD\n");
-    else if ()
-        printf("VISA\n");
-    else
-        printf("INVALID\n");
 }
 
 long checksum(long credit)
 {
-
+    return credit % 100 * 2;
 }
