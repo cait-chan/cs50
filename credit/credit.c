@@ -20,7 +20,7 @@ int main(void)
         printf("INVALID\n");
 }
 
-long checksum(void)
+long checksum(long credit)
 {
     
 }
