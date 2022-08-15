@@ -17,12 +17,18 @@ int main(void)
             {
                 printf(".");
             }
-        for (int k = 0; k <= height; k++)
+        for (int k = 0; k <= i; k++)
         {
             printf("#");
         }
-        for (int l = 0; l<)
+        for (int l = 0; l < 2; l++)
         {
+            printf(".");
+        }
+        for (int m = 0; m <= i + 1; m++)
+        {
+            printf("#");
+        }
             printf("\n");
         }
     }
