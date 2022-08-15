@@ -13,6 +13,12 @@ int main(void)
 
     for (int i = 0; i < height; i++)
     {
-        for (int j = )
+        for (int j = i; j < height; j++)
+            {
+                printf("*");
+            }
+        {
+            printf("#");
+        }
     }
 }
