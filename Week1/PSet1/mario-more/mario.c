@@ -3,6 +3,7 @@
 
 int main(void)
 {
+    // Prompt user for a height between 1 and 8 inclusive
     int height;
     do
     {
