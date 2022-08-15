@@ -10,7 +10,7 @@ int main(void)
     int y = get_int("y: ");
 
     // Divide x by y
-    float z = x / y;
+    float z = x / (float) y;
 
     //perform addition
     //int z = x + y;
