@@ -15,5 +15,7 @@ int main(void)
 
 long checksum(long credit)
 {
-    return credit % 100 * 2;
+    for (int i )
+
+    //return credit % 100 * 2;
 }
