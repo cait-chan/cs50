@@ -15,7 +15,11 @@ int main(void)
 
 long checksum(long credit)
 {
-    for (int i )
+    for (int i = (n - 1); i > 0; i - 2)
+    // where n is the number of digits
+    {
+        return i * 2
+    }
 
     //return credit % 100 * 2;
 }
