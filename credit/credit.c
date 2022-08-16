@@ -18,8 +18,7 @@ long checksum(long credit)
     // where n is the number of digits
     {
         for (int j = i % 10; j >= 0; j)
-        return int j = i % 10;
-        for (int j = )
+            return int j = i % 10;
     }
 
     //return credit % 100 * 2;
