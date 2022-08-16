@@ -14,10 +14,12 @@ int main(void)
 
 long checksum(long credit)
 {
-    for (int i = credit; i > 0; i / 10)
+    for (long i = credit; i > 0; i / 10)
     // where n is the number of digits
     {
-       return i % 10;
+        for (int j = i % 10; j >= 0; j)
+        return int j = i % 10;
+        for (int j = )
     }
 
     //return credit % 100 * 2;
