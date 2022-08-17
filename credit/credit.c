@@ -5,8 +5,11 @@ long checksum(long credit);
 
 int main(void)
 {
-    long credit = get_long("Credit card number: ");
-
+    do
+    {
+        long credit = get_long("Credit card number: ");
+    }
+    while (credit < 0);
     //Checksum
     int answer = checksum(credit);
     if (answer % 10 = 0)
