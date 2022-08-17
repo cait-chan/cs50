@@ -21,12 +21,12 @@ int main(void)
             printf("AMEX\n");
         }
         //MASTERCARD
-        else if ((credit / 100000000000000 ) == (51 | 52 | 53 | 54 | 55))
+        else if (((credit / 100000000000000 % 10) == (1 | 2 | 3 | 4 | 5)) && ((credit / 100000000000000 % 10) == 5))
         {
             printf("MASTERCARD\n");
         }
         //VISA
-        else if (credit / (1000000000000000 | 1000000000000) == 4)
+        else if (credit / (1000000000000000 | 1000000000000) % 10 == 4)
         {
             printf("VISA\n");
         }
