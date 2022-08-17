@@ -10,7 +10,15 @@ int main(void)
     //Checksum
     int answer = checksum(credit);
     if (answer % 10 = 0)
-        if 
+        //AMEX
+        if
+        //MASTERCARD
+        else if
+        //VISA
+        else if
+        //INVALID
+        else
+            printf("INVALID\n";)
 
     else
         printf("INVALID\n");
