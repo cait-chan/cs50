@@ -9,7 +9,10 @@ int main(void)
 
     //Checksum
     int answer = checksum(credit);
-    printf("Checksum: %i\n", answer);
+    if (answer % 10 = 0)
+
+    else
+        printf("INVALID\n");
 }
 
 long checksum(long credit)
