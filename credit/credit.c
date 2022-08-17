@@ -16,12 +16,12 @@ int main(void)
     if (answer % 10 == 0)
     {
         //AMEX
-        if ((credit / 10000000000000) == 34 | 37)
+        if ((credit / 10000000000000) == (34 | 37))
         {
             printf("AMEX\n");
         }
         //MASTERCARD
-        else if ((credit / 100000000000000) == 51 | 52 | 53 | 54 | 55)
+        else if ((credit / 100000000000000) == (51 | 52 | 53 | 54 | 55))
         {
             printf("MASTERCARD\n");
         }
@@ -33,12 +33,12 @@ int main(void)
         //INVALID
         else
         {
-            printf("INVALID\n";);
+            printf("INVALID\n");
         }
     }
     else
     {
-        printf("INVALID\n";)
+        printf("INVALID\n");
     }
 }
 
@@ -62,7 +62,7 @@ long checksum(long credit)
     for (long k = credit; k >= 1; k / 100)
     {
         int l = k % 10;
-        evensum = l + evensum
+        evensum = l + evensum;
     }
     return int sum = oddsum + evensum;
 }
