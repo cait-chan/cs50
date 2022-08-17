@@ -46,7 +46,7 @@ long checksum(long credit)
 {
     int oddsum = 0;
     int evensum = 0;
-    for (long i = (credit / 10); i >= 1; i = i / 100)
+    for (long i = (credit / 10); i > 1; i = i / 100)
     // where n is the number of digits
     {
         //j is the odd digits starting second from last
@@ -63,7 +63,7 @@ long checksum(long credit)
             oddsum = k + oddsum;
         }
     }
-    for (long l = credit; l >= 1; l = l / 100)
+    for (long l = credit; l > 1; l = l / 100)
     {
         int m = 0;
         m = l % 10;
