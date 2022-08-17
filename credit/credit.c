@@ -65,9 +65,7 @@ long checksum(long credit)
     }
     for (long l = credit; l > 1; l = l / 100)
     {
-        int m = 0;
-        m = l % 10;
-        evensum = m + evensum;
+        evensum = (l % 10) + evensum;
     }
     return oddsum + evensum;
 }
