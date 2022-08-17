@@ -44,7 +44,7 @@ int main(void)
 
 long checksum(long credit)
 {
-    int sum;
+    int oddsum;
     for (long i = (credit / 10); i >= 1; i / 100)
     // where n is the number of digits
     {
@@ -56,8 +56,15 @@ long checksum(long credit)
         }
         else
             return j;
-        sum = j + sum
+        oddsum = j + oddsum;
+        for (long k = credit; k >= 1; k / 100)
+        {
+            int l = k % 10;
+            
+
+        }
     }
+
     return sum;
        // for (int j = j; j >= 0; j)
        //     return int k = j % 10
