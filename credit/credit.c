@@ -5,6 +5,13 @@ long checksum(long credit);
 
 int main(void)
 {
+    long afirst = 100000000000000;
+    long asecond = 10000000000000;
+    long mfirst = 1000000000000000;
+    long msecond = 100000000000000;
+    long vfirst = 1000000000000;
+    long vsecond = 1000000000000000;
+
     long credit;
     do
     {
@@ -16,17 +23,17 @@ int main(void)
     if (answer % 10 == 0)
     {
         //AMEX
-        if (((credit / 10000000000000 % 10) == (4 | 7)) && ((credit / 100000000000000 % 10) == 3))
+        if (((credit / asecond % 10) == (4 | 7)) && ((credit / afirst % 10) == 3))
         {
             printf("AMEX\n");
         }
         //MASTERCARD
-        else if (((credit / 100000000000000 % 10) == (1 | 2 | 3 | 4 | 5)) && ((credit / 1000000000000000 % 10) == 5))
+        else if ((((credit / msecond % 10) == 1) | ((credit / msecond % 10) == 2) | ((credit / msecond % 10) == 3) | ((credit / msecond % 10) == 4) | ((credit / msecond % 10) == 5)) && ((credit / mfirst % 10) == 5))
         {
             printf("MASTERCARD\n");
         }
         //VISA
-        else if ((credit / 1000000000000000 % 10 == 4) || (credit / 1000000000000 % 10 == 4))
+        else if ((credit / vsecond % 10 == 4) || (credit / vfirst % 10 == 4))
         {
             printf("VISA\n");
         }
