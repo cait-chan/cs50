@@ -5,6 +5,7 @@ long checksum(long credit);
 
 int main(void)
 {
+    //Variables to find card digits
     long afirst = 100000000000000;
     long asecond = 10000000000000;
     long mfirst = 1000000000000000;
@@ -21,6 +22,7 @@ int main(void)
     //Checksum
     long answer = checksum(credit);
     if (answer % 10 == 0)
+    //if the credit card number passes Luhn's Algorithm
     {
         //AMEX
         if (((credit / asecond % 10) == (4 | 7)) && ((credit / afirst % 10) == 3))
@@ -54,13 +56,13 @@ long checksum(long credit)
     int oddsum = 0;
     int evensum = 0;
     for (long i = (credit / 10); i > 1; i = i / 100)
-    // where n is the number of digits
     {
         //j is the odd digits starting second from last
         int j = (i % 10) * 2;
         int k = 0;
         if (j >= 10)
         {
+            // this adds digits for sums > 9
             k = ((j % 10) + ((j / 10) % 10));
         }
         else
@@ -71,7 +73,9 @@ long checksum(long credit)
     }
     for (long l = credit; l > 1; l = l / 100)
     {
+        //l is the even digits starting from the end
         evensum += (l % 10);
     }
+    //returns the sum of Luhn's Algorithm
     return oddsum + evensum;
 }
