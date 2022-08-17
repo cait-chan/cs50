@@ -30,7 +30,8 @@ int main(void)
             printf("AMEX\n");
         }
         //MASTERCARD
-        else if ((((credit / msecond % 10) == 1) | ((credit / msecond % 10) == 2) | ((credit / msecond % 10) == 3) | ((credit / msecond % 10) == 4) | ((credit / msecond % 10) == 5)) && ((credit / mfirst % 10) == 5))
+        else if ((((credit / msecond % 10) == 1) | ((credit / msecond % 10) == 2) |
+            ((credit / msecond % 10) == 3) | ((credit / msecond % 10) == 4) | ((credit / msecond % 10) == 5)) && ((credit / mfirst % 10) == 5))
         {
             printf("MASTERCARD\n");
         }
