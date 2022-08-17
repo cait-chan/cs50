@@ -55,6 +55,7 @@ long checksum(long credit)
         if (j > 9)
         {
             return (j % 10) + ((j / 10) % 10);
+            oddsum = j + oddsum;
         }
         else
             return j;
