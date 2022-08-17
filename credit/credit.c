@@ -8,7 +8,7 @@ int main(void)
     long credit;
     do
     {
-        long credit = get_long("Credit card number: ");
+        credit = get_long("Credit card number: ");
     }
     while (credit <= 0);
     //Checksum
@@ -45,6 +45,7 @@ int main(void)
 long checksum(long credit)
 {
     int oddsum;
+    int evensum;
     for (long i = (credit / 10); i >= 1; i / 100)
     // where n is the number of digits
     {
@@ -57,17 +58,15 @@ long checksum(long credit)
         else
             return j;
         oddsum = j + oddsum;
-        for (long k = credit; k >= 1; k / 100)
-        {
-            int l = k % 10;
-            
-
-        }
     }
-
-    return sum;
+    for (long k = credit; k >= 1; k / 100)
+    {
+        int l = k % 10;
+        evensum = l + evensum
+    }
+    return int sum = oddsum + evensum;
+}
        // for (int j = j; j >= 0; j)
        //     return int k = j % 10
        //     for (int k = k; k >= 0; k)
     //return credit % 100 * 2;
-}
