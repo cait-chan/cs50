@@ -52,6 +52,9 @@ long checksum(long credit)
         {
             return int k = j % 10
             for (int k = k; k >= 0; k)
+            {
+                
+            }
         }
 
 
