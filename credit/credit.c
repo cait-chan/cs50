@@ -12,7 +12,7 @@ int main(void)
     while (credit < 0);
     //Checksum
     int answer = checksum(credit);
-    if (answer % 10 = 0)
+    if (answer % 10 == 0)
     {
         //AMEX
         if ((credit / 10000000000000) = 34 || 37)
