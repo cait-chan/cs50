@@ -10,19 +10,32 @@ int main(void)
     //Checksum
     int answer = checksum(credit);
     if (answer % 10 = 0)
+    {
         //AMEX
         if ((credit / 10000000000000) = 34 || 37)
+        {
             printf("AMEX\n");
+        }
         //MASTERCARD
-        else if
+        else if ((credit / 100000000000000) = 51 || 52 || 53 || 54 || 55)
+        {
+            printf("MASTERCARD\n");
+        }
         //VISA
-        else if
+        else if (((credit / 1000000000000000) = 4) || ((credit / 1000000000000) = 4))
+        {
+            printf("VISA\n");
+        }
         //INVALID
         else
-            printf("INVALID\n";)
-
+        {
+            printf("INVALID\n";);
+        }
+    }
     else
-        printf("INVALID\n");
+    {
+        printf("INVALID\n";)
+    }
 }
 
 long checksum(long credit)
