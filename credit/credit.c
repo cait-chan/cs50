@@ -26,7 +26,7 @@ int main(void)
             printf("MASTERCARD\n");
         }
         //VISA
-        else if (((credit / 1000000000000000) == 4) || ((credit / 1000000000000) == 4))
+        else if (credit / (1000000000000000 | 1000000000000) == 4)
         {
             printf("VISA\n");
         }
@@ -55,15 +55,13 @@ long checksum(long credit)
         if (j > 9)
         {
             k = ((j % 10) + ((j / 10) % 10));
-            oddsum += k;
-            return oddsum;
         }
         else
         {
             return k;
-            oddsum += k;
-            return oddsum;
         }
+        oddsum += k;
+        return oddsum;
     }
     for (long l = credit; l > 1; l = l / 100)
     {
