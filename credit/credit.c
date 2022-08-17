@@ -16,7 +16,7 @@ int main(void)
     if (answer % 10 == 0)
     {
         //AMEX
-        if ((credit / 10000000000000) == (34 | 37))
+        if ((credit / 100000000000000) == (34 | 37))
         {
             printf("AMEX\n");
         }
