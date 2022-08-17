@@ -26,7 +26,7 @@ int main(void)
             printf("MASTERCARD\n");
         }
         //VISA
-        else if ((credit / 1000000000000000 % 10 == 4) | (credit / 1000000000000 % 10 == 4))
+        else if ((credit / 1000000000000000 % 10 == 4) || (credit / 1000000000000 % 10 == 4))
         {
             printf("VISA\n");
         }
