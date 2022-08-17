@@ -53,6 +53,5 @@ long checksum(long credit)
 
 
     }
-
     //return credit % 100 * 2;
 }
