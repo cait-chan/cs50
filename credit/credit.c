@@ -5,11 +5,12 @@ long checksum(long credit);
 
 int main(void)
 {
+    long credit;
     do
     {
         long credit = get_long("Credit card number: ");
     }
-    while (credit < 0);
+    while (credit <= 0);
     //Checksum
     int answer = checksum(credit);
     if (answer % 10 == 0)
@@ -47,6 +48,7 @@ long checksum(long credit)
     // where n is the number of digits
     {
         //for (int j = i % 10; j >= 0; j)
+        int j;
         return int j = i % 10 * 2;
         if (j > 9)
         {
@@ -54,7 +56,7 @@ long checksum(long credit)
         }
         else
             return j;
-        
+
 
         for (int j = j; j >= 0; j)
             return int k = j % 10
