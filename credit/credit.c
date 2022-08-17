@@ -22,7 +22,7 @@ int main(void)
     //Checksum
     long answer = checksum(credit);
     if (answer % 10 == 0)
-    //if the credit card number passes Luhn's Algorithm
+        //if the credit card number passes Luhn's Algorithm
     {
         //AMEX
         if (((credit / asecond % 10) == (4 | 7)) && ((credit / afirst % 10) == 3))
@@ -31,7 +31,8 @@ int main(void)
         }
         //MASTERCARD
         else if ((((credit / msecond % 10) == 1) | ((credit / msecond % 10) == 2) |
-            ((credit / msecond % 10) == 3) | ((credit / msecond % 10) == 4) | ((credit / msecond % 10) == 5)) && ((credit / mfirst % 10) == 5))
+                  ((credit / msecond % 10) == 3) | ((credit / msecond % 10) == 4) |
+                  ((credit / msecond % 10) == 5)) && ((credit / mfirst % 10) == 5))
         {
             printf("MASTERCARD\n");
         }
