@@ -11,7 +11,7 @@ int main(void)
     int answer = checksum(credit);
     if (answer % 10 = 0)
         //AMEX
-        if
+        if (((credit / 10000000000000) % 10) =
         //MASTERCARD
         else if
         //VISA
