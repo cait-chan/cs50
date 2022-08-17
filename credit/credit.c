@@ -55,17 +55,20 @@ long checksum(long credit)
         if (j > 9)
         {
             k = ((j % 10) + ((j / 10) % 10));
-            oddsum = k + oddsum;
+            oddsum += k;
+            return oddsum;
         }
         else
         {
             return k;
-            oddsum = k + oddsum;
+            oddsum += k;
+            return oddsum;
         }
     }
     for (long l = credit; l > 1; l = l / 100)
     {
-        evensum = (l % 10) + evensum;
+        evensum += (l % 10);
+        return evensum;
     }
     return oddsum + evensum;
 }
