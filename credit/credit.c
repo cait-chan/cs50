@@ -58,8 +58,10 @@ long checksum(long credit)
             oddsum = j + oddsum;
         }
         else
+        {
             return j;
-        oddsum = j + oddsum;
+            oddsum = j + oddsum;
+        }
     }
     for (long k = credit; k >= 1; k / 100)
     {
