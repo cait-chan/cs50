@@ -52,7 +52,7 @@ long checksum(long credit)
         //j is the odd digits starting second from last
         int j = (i % 10) * 2;
         int k = 0;
-        if (j > 9)
+        if (j >= 10)
         {
             k = ((j % 10) + ((j / 10) % 10));
         }
