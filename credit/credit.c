@@ -55,7 +55,9 @@ long checksum(long credit)
         }
         else
             return j;
+        sum j
 
+        for (int j = j; j >= 0; j)
             return int k = j % 10
             for (int k = k; k >= 0; k)
             {
