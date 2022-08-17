@@ -71,7 +71,3 @@ long checksum(long credit)
     }
     return oddsum + evensum;
 }
-       // for (int j = j; j >= 0; j)
-       //     return int k = j % 10
-       //     for (int k = k; k >= 0; k)
-    //return credit % 100 * 2;
