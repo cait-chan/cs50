@@ -61,12 +61,10 @@ long checksum(long credit)
             k = j;
         }
         oddsum += k;
-        return oddsum;
     }
     for (long l = credit; l > 1; l = l / 100)
     {
         evensum += (l % 10);
-        return evensum;
     }
     return oddsum + evensum;
 }
