@@ -10,6 +10,7 @@ int main(void)
     //Checksum
     int answer = checksum(credit);
     if (answer % 10 = 0)
+        if 
 
     else
         printf("INVALID\n");
