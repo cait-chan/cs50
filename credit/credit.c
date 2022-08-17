@@ -21,7 +21,7 @@ int main(void)
             printf("AMEX\n");
         }
         //MASTERCARD
-        else if (((credit / 100000000000000 % 10) == (1 | 2 | 3 | 4 | 5)) && ((credit / 1000000000000000 % 10) == 5))
+        else if (((credit / 100000000000000 % 10) == (1 | 2 | 3 | 4 | 5)) & ((credit / 1000000000000000 % 10) == 5))
         {
             printf("MASTERCARD\n");
         }
