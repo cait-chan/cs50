@@ -47,19 +47,19 @@ long checksum(long credit)
     for (long i = (credit / 10); i >= 1; i / 100)
     // where n is the number of digits
     {
-        //for (int j = i % 10; j >= 0; j)
-        int j;
-        return int j = i % 10 * 2;
+        //j is the odd digits starting second from last
+        int j = i % 10 * 2;
         if (j > 9)
         {
             return (j % 10) + ((j / 10) % 10);
         }
         else
             return j;
+
     }
 
 
-    return ()
+    return sum;
        // for (int j = j; j >= 0; j)
        //     return int k = j % 10
        //     for (int k = k; k >= 0; k)
