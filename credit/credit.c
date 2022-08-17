@@ -12,7 +12,7 @@ int main(void)
     }
     while (credit <= 0);
     //Checksum
-    int answer = checksum(credit);
+    long answer = checksum(credit);
     if (answer % 10 == 0)
     {
         //AMEX
