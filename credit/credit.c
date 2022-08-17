@@ -16,17 +16,17 @@ int main(void)
     if (answer % 10 == 0)
     {
         //AMEX
-        if ((credit / 10000000000000) = 34 || 37)
+        if ((credit / 10000000000000) == 34 | 37)
         {
             printf("AMEX\n");
         }
         //MASTERCARD
-        else if ((credit / 100000000000000) = 51 || 52 || 53 || 54 || 55)
+        else if ((credit / 100000000000000) == 51 | 52 | 53 | 54 | 55)
         {
             printf("MASTERCARD\n");
         }
         //VISA
-        else if (((credit / 1000000000000000) = 4) || ((credit / 1000000000000) = 4))
+        else if (((credit / 1000000000000000) == 4) || ((credit / 1000000000000) == 4))
         {
             printf("VISA\n");
         }
