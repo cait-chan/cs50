@@ -48,12 +48,14 @@ long checksum(long credit)
     {
         //for (int j = i % 10; j >= 0; j)
         return int j = i % 10 * 2;
-        for (int j = j; j >= 0; j / 10)
+        if (j > 9)
         {
+            return j 
+        }
             return int k = j % 10
             for (int k = k; k >= 0; k)
             {
-                
+
             }
         }
 
