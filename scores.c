@@ -4,11 +4,11 @@ int main(void)
 {
     int scores[3];
 
-    scores[0] = 72;
+    scores[0] = get_int("Score);
     scores[1] = 73;
     scores[2] = 33;
 
-    printf("Average: %f\n", (score1 + score2 + score3) / 3.0);
+    printf("Average: %f\n", (scores[0] + scores[1] + scores[2]) / 3.0);
 }
 // to get precise average without throwing away decimal points
 // need to convert this into a float
