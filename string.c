@@ -10,5 +10,9 @@ int main(void)
     //if you couldn't use %s in the printf function,
     //how else could you print out the string?
 
-    for (int i = 0; i)
+    for (int i = 0; i < strlen(s); i++)
+    {
+        printf("%c", s[i]);
+    }
+    printf("\n");
 }
