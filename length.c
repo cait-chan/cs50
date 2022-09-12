@@ -23,3 +23,7 @@ int string_length(string s)
     return i;
 }
 // this finds the length of the string
+
+// we don't need to do this though because there is the
+// 'strlen' function within the <string.h> library that
+// already finds the length of a string
