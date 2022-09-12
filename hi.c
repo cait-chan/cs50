@@ -11,7 +11,8 @@ int main(void)
     // we are converting the chars to ints
 
     //string s = 'HI!';
-    //printf("%i %i %i\n", s[0], s[1], s[2])
+    //printf("%i %i %i %i\n", s[0], s[1], s[2], s[3])
         // this will look at the individual values within the
         // string array and convert them to ints (ASCII values)
+        // this will print: 72 73 33 0 (see notes for NUL value)
 }
