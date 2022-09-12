@@ -10,8 +10,10 @@ int main(void)
     for (int i = 0, n = strlen(s); i < n; i++)
     {
         if (islower(s[i]))
+        //can put the function in parentheses to check if
+        //is not 0
         {
-            printf("%c", s[i] - 32);
+            printf("%c", toupper(s[i]));
         }
         else
         {
