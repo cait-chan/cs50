@@ -3,6 +3,7 @@
 
 int main(int argc, string argv[])
 {
+    if (argc == 2)
     printf("hello, %s\n", argv[1]);
     //since argv records everything the human types,
     //argv[0] will be the name of the program run
