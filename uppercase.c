@@ -8,8 +8,10 @@ int main(void)
     printf("After: ");
     for (int i = 0, n = strlen(s); i < n; i++)
     {
-        if (s[i] <= i <= 122)
+        if (s[i] >= 'a' && s[i] <= 'z')
+        {
             i -= 32
+        }
         else
     }
 }
