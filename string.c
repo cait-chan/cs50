@@ -6,5 +6,9 @@ int main(void)
 {
     string s = get_string("Input: ");
     printf("Output: ");
-    p
+
+    //if you couldn't use %s in the printf function,
+    //how else could you print out the string?
+
+    for (int i = 0; i)
 }
