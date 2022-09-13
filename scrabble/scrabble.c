@@ -41,19 +41,18 @@ int compute_score(string word)
     // TODO: Compute and return score for string
     for (int i = 0, n = strlen(word); i < n; i++)
     {
+        if (isalpha(word[i]))
+        {
         //want to move through the word, adding up the points
         //for each letter value
-        if (islower(word[i]))
-        {
-            place = ((toupper(word[i]))) - 65;
-        }
-        else if (isupper(word[i]))
-        {
-            place = (word[i]) - 65;
-        }
-        else
-        {
-            score = 0;
+            if (islower(word[i]))
+            {
+                place = ((toupper(word[i]))) - 65;
+            }
+            else if (isupper(word[i]))
+            {
+                place = (word[i]) - 65;
+            }
         }
         score = POINTS[place];
         scoretotal += score;
