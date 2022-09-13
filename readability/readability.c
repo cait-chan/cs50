@@ -77,9 +77,9 @@ int count_sentences(string text)
         {
             sentences += 1;
         }
-        else if ((text[i] - 46) == 0)
+        else if ((text[i] - 63) == 0)
         {
-            
+            sentences += 1;
         }
         sentences += 0;
     }
