@@ -57,6 +57,7 @@ int compute_score(string word)
         score = POINTS[place];
         scoretotal += score;
         score = 0;
+        place = 0;
     }
     return scoretotal;
 }
