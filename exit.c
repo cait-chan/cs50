@@ -3,6 +3,7 @@
 
 //want to write a program that will quit if argc is not
 //equal to 2
+//we can make the program quit but having main return a value
 //
 
 int main(int argc, string argv[])
