@@ -11,6 +11,10 @@ int main(int argc, string argv[])
     if (argc != 2)
     {
         printf("Missing command-line argument\n");
-        return
+        return 1;
     }
+    printf("hello, %s\n", argv[1]);
+    //don't need to write 'else' here because it will continue
+    //there if 1 isn't returned
+    return 0;
 }
