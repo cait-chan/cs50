@@ -44,11 +44,11 @@ int compute_score(string word)
         //for each letter value
         if (islower(word[i]))
         {
-            score = POINTS[int (toupper(word[i])) - 65];
+            score = POINTS[(int (toupper(word[i])) - 65)];
         }
         else if (isupper(word[i]))
         {
-            score = POINTS[int (word[i])];
+            score = POINTS[(int (word[i]))];
         }
         else
         {
