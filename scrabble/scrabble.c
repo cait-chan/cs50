@@ -40,7 +40,10 @@ int compute_score(string word)
     {
         //want to move through the word, adding up the points
         //for each letter value
-        if (islower)
+        if (islower(word[i]))
+        {
+            
+        }
     }
     return ()
 }
