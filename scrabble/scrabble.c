@@ -45,11 +45,11 @@ int compute_score(string word)
         //for each letter value
         if (islower(word[i]))
         {
-            place = ((toupper(word[i]))) - 65;
+            place = ((toupper(word[i]))) - 'A';
         }
         else if (isupper(word[i]))
         {
-            place = (word[i]) - 65;
+            place = (word[i]) - 'A';
         }
         else
         {
