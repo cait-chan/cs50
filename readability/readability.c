@@ -13,12 +13,11 @@ int main(void)
     printf("%s\n", text);
 
     int count = count_letters(text);
-    printf("%i letters\n", count);
-
     int words = count_words(text);
-    printf("%i words\n", words);
-
     int sentences = count_sentences(text);
+
+    int index = 0.0588 * ()
+
     printf("%i sentences\n", sentences);
 
     //TODO set up int so that the grade level ranges from 1 to 16
