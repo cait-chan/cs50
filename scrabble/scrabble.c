@@ -52,10 +52,7 @@ int compute_score(string word)
             int place = (word[i]);
             score = POINTS[place];
         }
-        else
-        {
-            score = 0;
-        }
+        score = 0;
         scoretotal += score;
     }
     return scoretotal;
