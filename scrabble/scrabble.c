@@ -42,7 +42,7 @@ int compute_score(string word)
         //for each letter value
         if (islower(word[i]))
         {
-            
+            return POINTS[(int (toupper(word[i])) - 65]
         }
     }
     return ()
