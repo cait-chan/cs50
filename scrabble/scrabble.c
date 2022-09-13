@@ -35,6 +35,8 @@ int main(void)
 
 int compute_score(string word)
 {
+    int score = 0;
+    int scoretotal = 0;
     // TODO: Compute and return score for string
     for (int i = 0, n = strlen(word); i < n; i++)
     {
@@ -42,8 +44,17 @@ int compute_score(string word)
         //for each letter value
         if (islower(word[i]))
         {
-            return POINTS[(int (toupper(word[i])) - 65]
+            score = POINTS[int (toupper(word[i])) - 65];
         }
+        else if (isupper(word[i]))
+        {
+            score = POINTS[int (word[i])];
+        }
+        else
+        {
+            score = 0
+        }
+        scoretotal += score
     }
-    return ()
+    return scoretotal
 }
