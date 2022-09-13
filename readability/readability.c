@@ -69,17 +69,17 @@ int count_sentences(string text)
     int sentences = 0;
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        if ((text[i] - 33) == 0)
+        if ((text[i] - 33) == 0 || (text[i] - 46) == 0 || (text[i] - 63) == 0)
         {
             sentences += 1;
         }
-        else if ((text[i] - 46) == 0)
+        //else if ((text[i] - 46) == 0)
         {
-            sentences += 1;
+           // sentences += 1;
         }
-        else if ((text[i] - 63) == 0)
+       // else if ((text[i] - 63) == 0)
         {
-            sentences += 1;
+           // sentences += 1;
         }
         sentences += 0;
     }
