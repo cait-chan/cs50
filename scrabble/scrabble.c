@@ -51,10 +51,6 @@ int compute_score(string word)
         {
             place = (word[i]) - 'A';
         }
-        else
-        {
-            score = 0;
-        }
         score = POINTS[place];
         scoretotal += score;
         score = 0;
