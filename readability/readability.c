@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <math.h>
 
 int count_letters(string text);
 int count_words(string text);
@@ -16,9 +17,14 @@ int main(void)
     int words = count_words(text);
     int sentences = count_sentences(text);
 
-    int index = 0.0588 * ()
+    float index = 0.0588 * (count / 100(words)) - 0.296 * (sentences / (100(words))) - 15.8
+    int round(float index) = int grade;
 
-    printf("%i sentences\n", sentences);
+    if ((int round(float index)) < 1)
+    {
+        printf(" Grade %i\n", grade);
+    }
+    printf("%i \n", sentences);
 
     //TODO set up int so that the grade level ranges from 1 to 16
     //printf("Grade %i\n", int );
