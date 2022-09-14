@@ -11,7 +11,8 @@ int main(int argc, string argv[])
         {
 
         }
-        printf("ciphertext: ")
+        printf("ciphertext: ");
+        printf("\n");
     }
     printf("Usage: ./caesar key\n");
     return 1;
