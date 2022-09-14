@@ -11,10 +11,8 @@ int main(int argc, string argv[])
     if (argc == 2)
     {
         string plaintext = get_string("plaintext:  ");
-        for (int i = 0, n = strlen(plaintext); i < n; i++)
-        {
+        
 
-        }
         printf("ciphertext: ");
         printf("\n");
         return 0;
