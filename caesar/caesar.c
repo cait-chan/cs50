@@ -4,5 +4,8 @@
 int main(int argc, string argv[])
 {
     //want to encrypt messages using Caesar's algorithm
-    
+    if (argc == 2)
+    {
+        
+    }
 }
