@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 
+bool only_digits(string plaintext);
+
 int main(int argc, string argv[])
 {
     //want to encrypt messages using Caesar's algorithm
@@ -20,3 +22,7 @@ int main(int argc, string argv[])
     return 1;
 }
 
+bool only_digits(string plaintext)
+{
+    
+}
