@@ -17,13 +17,13 @@ int main(void)
     int count = count_letters(text);
     int words = count_words(text);
     int sentences = count_sentences(text);
-    float index = (0.0588 * (count / 100(words)) - 0.296 * (sentences / (100(words))) - 15.8);
+    float index = (0.0588 * (count / (100 * words)) - 0.296 * (sentences / (100 * words)) - 15.8);
 
     if (round(index) < 1)
     {
         printf("Before Grade 1\n");
     }
-    else if (1 <= round(index) <= 16)
+    else if (1 <= (int) round(index) <= 16)
     {
         printf("Grade %i\n", index);
     }
