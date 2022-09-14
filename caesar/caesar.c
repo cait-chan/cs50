@@ -33,5 +33,4 @@ bool only_digits(string plaintext)
         }
         return false
     }
-
 }
