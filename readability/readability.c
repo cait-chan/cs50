@@ -18,9 +18,9 @@ int main(void)
     int sentences = count_sentences(text);
 
     float index = 0.0588 * (count / 100(words)) - 0.296 * (sentences / (100(words))) - 15.8
-    int round(float index) = int grade;
+    int grade = (int) round(index);
 
-    if ((int round(float index)) < 1)
+    if ((int round(index)) < 1)
     {
         printf(" Grade %i\n", grade);
     }
