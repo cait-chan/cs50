@@ -12,7 +12,6 @@ int main(void)
 {
     //TODO set up int so that the grade level ranges from 1 to 16
     string text = get_string("Text: ");
-    printf("%s\n", text);
 
     int count = count_letters(text);
     int words = count_words(text);
