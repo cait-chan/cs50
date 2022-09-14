@@ -13,6 +13,7 @@ int main(int argc, string argv[])
         }
         printf("ciphertext: ");
         printf("\n");
+        return 0;
     }
     printf("Usage: ./caesar key\n");
     return 1;
