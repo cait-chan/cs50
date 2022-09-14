@@ -70,14 +70,16 @@ int count_words(string text)
 
 int count_sentences(string text)
 {
+    int lines = 0;
     int sentences = 0;
     for (int i = 0, n = strlen(text); i < n; i++)
     {
         if ((text[i] - 33) == 0 || (text[i] - 46) == 0 || (text[i] - 63) == 0)
         {
-            sentences += 1;
+            lines += 1;
         }
-        sentences += 0;
+        lines += 0;
+        sentences += lines;
     }
     return sentences;
 }
