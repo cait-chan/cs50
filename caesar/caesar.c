@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 bool only_digits(string plaintext);
 
@@ -26,7 +27,7 @@ bool only_digits(string plaintext)
 {
     for (int i = 0, n = strlen(plaintext); i < n; i++)
     {
-        if (plaintext[i])
+        if (isdigit(plaintext[i]))
         {
             return true
         }
