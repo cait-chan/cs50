@@ -13,9 +13,9 @@ int main(void)
     //TODO set up int so that the grade level ranges from 1 to 16
     string text = get_string("Text: ");
 
-    int letters = count_letters(text);
-    int words = count_words(text);
-    int sentences = count_sentences(text);
+    float letters = count_letters(text);
+    float words = count_words(text);
+    float sentences = count_sentences(text);
 
     float L = letters / words * 100;
     float S = sentences / words * 100;
@@ -70,16 +70,14 @@ int count_words(string text)
 
 int count_sentences(string text)
 {
-    int lines = 0;
     int sentences = 0;
     for (int i = 0, n = strlen(text); i < n; i++)
     {
         if ((text[i] - 33) == 0 || (text[i] - 46) == 0 || (text[i] - 63) == 0)
         {
-            lines += 1;
+            sentences += 1;
         }
-        lines += 0;
-        sentences += lines;
+        sentences += 0;
     }
     return sentences;
 }
