@@ -24,5 +24,8 @@ int main(int argc, string argv[])
 
 bool only_digits(string plaintext)
 {
-    
+    for (int i = 0, n = strlen(plaintext); i < n; i++)
+    {
+        
+    }
 }
