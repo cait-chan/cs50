@@ -29,6 +29,7 @@ int main(void)
     else if (1 <= round(index) && round(index) <= 16)
     {
         printf("Grade %i\n", (int) round(index));
+        //needed to round index here so that it wouldn't round down
     }
     else
     {
@@ -61,15 +62,18 @@ int count_words(string text)
     {
         if (isspace(text[i]))
         {
-            words +=1;
+            words += 1;
         }
-        words +=0;
+        words += 0;
     }
     return words += 1;
 }
 
 int count_sentences(string text)
 {
+    //ran through text character by character to see if they were
+    //a period, exclamation mark or question mark to denote the
+    //end of a sentence, then added those to the total count
     int sentences = 0;
     for (int i = 0, n = strlen(text); i < n; i++)
     {
