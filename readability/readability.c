@@ -10,30 +10,24 @@ int count_sentences(string text);
 
 int main(void)
 {
+    //TODO set up int so that the grade level ranges from 1 to 16
     string text = get_string("Text: ");
     printf("%s\n", text);
 
     int count = count_letters(text);
     int words = count_words(text);
     int sentences = count_sentences(text);
+    int index = 0.0588 * (count / 100(words)) - 0.296 * (sentences / (100(words))) - 15.8;
 
-    int round(index) = 0.0588 * (count / 100(words)) - 0.296 * (sentences / (100(words))) - 15.8
-
-    if ((int round(index)) < 1)
+    if (round(index) < 1)
     {
-        printf(" Grade %i\n", grade);
+        printf("Before Grade 1\n");
     }
-    printf("%i \n", sentences);
-
-    //TODO set up int so that the grade level ranges from 1 to 16
-    //printf("Grade %i\n", int );
-    //maybe set up an array of grade levels?
-   // else if
-        //printf("Grade 16+\n");
-        //this should print if the index number is greater than a senior undergraduate reading level
-    //else
-        //printf("Before Grade 1\n");
-        //this should print if the index number is less than one
+    else if (1 <= round(index) <= 16)
+    {
+        printf("Grade %i\n", index);
+    }
+    printf("Grade 16+\n");
 }
 
 int count_letters(string text)
