@@ -23,11 +23,14 @@ int main(void)
     {
         printf("Before Grade 1\n");
     }
-    else if (1 <= (int) round(index) <= 16)
+    else if (1 <= round(index) && round(index) <= 16)
     {
-        printf("Grade %i\n", index);
+        printf("Grade %i\n", (int) index);
     }
-    printf("Grade 16+\n");
+    else
+    {
+        printf("Grade 16+\n");
+    }
 }
 
 int count_letters(string text)
