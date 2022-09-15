@@ -15,12 +15,12 @@ int main(int argc, string argv[])
         if (only_digits(argv[1]))
         {
             return 0;
-            int letter = atoi(argv[1]);
+            int key = atoi(argv[1]);
             string plaintext = get_string("plaintext:  ");
 
             for (int i = 0, n = strlen(plaintext); i < n; i++)
             {
-                printf("ciphertext: %c", rotate());
+                printf("ciphertext: %c", rotate(plaintext[i]));
             }
         }
         printf("Usage: ./caesar key\n");
@@ -44,7 +44,7 @@ bool only_digits(string plaintext)
     return false;
 }
 
-char rotate(char c, int n)
+char rotate(char c, int key)
 {
     if (isalpha(c))
     //if char c is a letter, the function will rotate that char
