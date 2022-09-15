@@ -11,7 +11,7 @@ int main(int argc, string argv[])
     if (argc == 2)
     {
         string plaintext = get_string("plaintext:  ");
-        
+
 
         printf("ciphertext: ");
         printf("\n");
@@ -27,8 +27,8 @@ bool only_digits(string plaintext)
     {
         if (isdigit(plaintext[i]))
         {
-            return true
+            return true;
         }
-        return false
+        return false;
     }
 }
