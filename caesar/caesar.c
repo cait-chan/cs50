@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 bool only_digits(string plaintext);
 
@@ -11,7 +12,6 @@ int main(int argc, string argv[])
     if (argc == 2)
     {
         //string plaintext = get_string("plaintext:  ");
-
         if (only_digits(argv[1]))
         {
             return 0;
