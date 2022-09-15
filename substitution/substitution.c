@@ -54,10 +54,10 @@ char substitution(char c, string s)
         {
             if (islower(s[i]))
             {
-                return c = tolower(argv[c]);
+                return c = tolower(s[c]);
             }
             //else is uppercase
-            return c = toupper(argv[c]);
+            return c = toupper(s[c]);
         }
         return c;
     }
