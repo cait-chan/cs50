@@ -48,9 +48,8 @@ bool only_digits(string s)
         {
             return false;
         }
-        return true;
     }
-    return false;
+    return true;
 }
 
 char rotate(char c, int key)
