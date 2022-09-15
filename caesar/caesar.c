@@ -14,7 +14,7 @@ int main(int argc, string argv[])
         if (only_digits(argv[1]))
         {
             return 0;
-            
+            int 
             string plaintext = get_string("plaintext:  ");
 
         }
