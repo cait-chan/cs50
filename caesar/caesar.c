@@ -50,6 +50,7 @@ bool only_digits(string s)
         }
         return false;
     }
+    return false;
 }
 
 char rotate(char c, int key)
