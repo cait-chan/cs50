@@ -11,10 +11,12 @@ int main(int argc, string argv[])
     //want to encrypt messages using Caesar's algorithm
     if (argc == 2)
     {
-        //string plaintext = get_string("plaintext:  ");
         if (only_digits(argv[1]))
         {
             return 0;
+            
+            string plaintext = get_string("plaintext:  ");
+
         }
         printf("Usage: ./caesar key\n");
         return 1;
