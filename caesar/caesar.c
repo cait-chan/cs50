@@ -54,8 +54,9 @@ char rotate(char c, int n)
         //by int n, then will add it back afterwards
         if (isupper(c))
         {
-            return ((int) c - 'A') + (n % 26)
+            return (char) c = ((int) c - 'A') + (n % 26) + 'A';
         }
+        return (char) c = ((int) c - 'a') + (n % 26) + 'a';
     }
     return c;
     //if char c is not a letter, the function will return
