@@ -17,11 +17,11 @@ int main(int argc, string argv[])
         }
         else
         {
-            printf("Usage: ./substitution key");
+            printf("Key must contain 26 characters.");
             return 1;
         }
     }
     //this will print if there is no command-line argument or too many
-    printf("Key must contain 26 characters.");
+    printf("Usage: ./substitution key");
     return 1;
 }
