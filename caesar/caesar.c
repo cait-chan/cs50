@@ -12,11 +12,14 @@ int main(int argc, string argv[])
     {
         string plaintext = get_string("plaintext:  ");
 
-        only_digits(plaintext);
-
-        printf("ciphertext: ");
-        printf("\n");
-        return 0;
+        if (only_digits(plaintext))
+        {
+            return 0;
+        }
+        
+        //printf("ciphertext: ");
+        //printf("\n");
+       // return 0;
     }
     printf("Usage: ./caesar key\n");
     return 1;
