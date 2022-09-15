@@ -13,7 +13,7 @@ int main(int argc, string argv[])
     if (argc == 2)
     {
         if (only_digits(argv[1]))
-        //tests whether the key is numeric
+            //tests whether the key is numeric
         {
             int key = atoi(argv[1]);
             //need to do this because command-line arguments are enterred as strings
@@ -55,8 +55,8 @@ bool only_digits(string s)
 char rotate(char c, int key)
 {
     if (isalpha(c))
-    //if char c is a letter, the function will rotate that char
-    //by int n positions and return that char
+        //if char c is a letter, the function will rotate that char
+        //by int n positions and return that char
     {
         //want to cast char to an int so that its ASCII value
         //will be used. Then can subtract 'A' from uppercase or
