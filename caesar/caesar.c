@@ -15,6 +15,7 @@ int main(int argc, string argv[])
         if (only_digits(argv[1]))
         //tests whether the key is numeric
         {
+            return 0;
             int key = atoi(argv[1]);
             //need to do this because command-line arguments are enterred as strings
             //need our key to be an integer in order to do math with it later on
