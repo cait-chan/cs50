@@ -43,16 +43,18 @@ int main(int argc, string argv[])
     return 1;
 }
 
-char substitution(char c, string s)
+char substitution(string plaintext, string s)
+//string s is argv[1] ie. the key
 {
     //should convert the plaintext to ASCII values
     //then should can plug in the plaintext letter values into
     //the key array so that the key values will be substituted
-    for (int i = 0, n = strlen(s); i < n; i++)
+    for (int i = 0, n = strlen(plaintext); i < n; i++)
     {
-        if (isalpha(s[i]))
+        char c = plaintext[i];
+        if (isalpha(c))
         {
-            if (islower(s[i]))
+            if (islower(c))
             {
                 return c = tolower(s[c]);
             }
