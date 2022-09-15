@@ -44,5 +44,20 @@ bool only_digits(string plaintext)
 
 char rotate(char c, int n)
 {
-    
+    if (isalpha(c))
+    //if char c is a letter, the function will rotate that char
+    //by int n positions and return that char
+    {
+        //want to cast char to an int so that its ASCII value
+        //will be used. Then can subtract 'A' from uppercase or
+        //'a' from lowercase so that it can be rotated properly
+        //by int n, then will add it back afterwards
+        if (isupper(c))
+        {
+            
+        }
+    }
+    return c;
+    //if char c is not a letter, the function will return
+    //the same char
 }
