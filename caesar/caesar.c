@@ -17,8 +17,11 @@ int main(int argc, string argv[])
             return 0;
             int letter = atoi(argv[1]);
             string plaintext = get_string("plaintext:  ");
-            printf("ciphertext: %");
-            printf("\n");
+
+            for (int i = 0, n = strlen(plaintext); i < n; i++)
+            {
+                printf("ciphertext: %c", rotate());
+            }
         }
         printf("Usage: ./caesar key\n");
         return 1;
