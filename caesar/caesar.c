@@ -10,7 +10,7 @@ int main(int argc, string argv[])
     //want to encrypt messages using Caesar's algorithm
     if (argc == 2)
     {
-        string plaintext = get_string("plaintext:  ");
+        //string plaintext = get_string("plaintext:  ");
 
         if (only_digits(argv[1]))
         {
