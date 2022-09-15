@@ -12,7 +12,7 @@ int main(int argc, string argv[])
     {
         string plaintext = get_string("plaintext:  ");
 
-        if (only_digits(plaintext))
+        if (only_digits(argv[1]))
         {
             return 0;
         }
