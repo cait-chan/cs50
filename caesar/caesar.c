@@ -20,7 +20,7 @@ int main(int argc, string argv[])
 
             for (int i = 0, n = strlen(plaintext); i < n; i++)
             {
-                printf("ciphertext: %c", rotate(plaintext[i]));
+                printf("ciphertext: %c", rotate(plaintext[i], key));
             }
         }
         printf("Usage: ./caesar key\n");
@@ -56,9 +56,9 @@ char rotate(char c, int key)
         //by int n, then will add it back afterwards
         if (isupper(c))
         {
-            return (char) c = ((int) c - 'A') + (n % 26) + 'A';
+            return (char) c = ((int) c - 'A') + (key % 26) + 'A';
         }
-        return (char) c = ((int) c - 'a') + (n % 26) + 'a';
+        return (char) c = ((int) c - 'a') + (key % 26) + 'a';
     }
     return c;
     //if char c is not a letter, the function will return
