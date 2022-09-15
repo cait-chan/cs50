@@ -43,10 +43,21 @@ int main(int argc, string argv[])
     return 1;
 }
 
-string substitution(string s)
+char substitution(char c, string s)
 {
     //should convert the plaintext to ASCII values
     //then should can plug in the plaintext letter values into
     //the key array so that the key values will be substituted
-
+    for (int i = 0, n = strlen(s); i < n; i++)
+    {
+        if (isalpha(s[i]))
+        {
+            if (islower(s[i]))
+            {
+                char c = (c - 'a')
+            }
+            //else is uppercase
+        }
+    }
+    return c;
 }
