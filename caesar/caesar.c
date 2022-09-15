@@ -20,6 +20,7 @@ int main(int argc, string argv[])
             for (int i = 0, n = strlen(plaintext); i < n; i++)
             {
                 printf("ciphertext: %c", rotate(plaintext[i], key));
+                printf("\n");
             }
         }
         printf("Usage: ./caesar key\n");
