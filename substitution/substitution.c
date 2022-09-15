@@ -12,11 +12,12 @@ int main(int argc, string argv[])
     {
         if (isalpha(argv[]) && strlen(argv[]) == 26 && )
         {
-
+            
         }
         else
         {
-            printf
+            printf("Usage: ./substitution key");
+            return 1;
         }
     }
     //this will print if there is no command-line argument or too many
