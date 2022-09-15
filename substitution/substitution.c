@@ -20,7 +20,8 @@ int main(int argc, string argv[])
             return 1;
         }
         else if ()
-            //this specifies that the key must have each letter only once
+            //this specifies that the key not have repeated characters
+            //this should be case-insensitive
         {
             printf("Key must not contain repeated characters.");
             return 1;
