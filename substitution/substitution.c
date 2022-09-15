@@ -10,7 +10,7 @@ int main(int argc, string argv[])
         //the number of command-line arguments must be 2
         //one to run the program and the other to specify the key
     {
-        if (isalpha(argv[]) && strlen(argv[]) == 26 && )
+        if (isalpha(argv[]) && strlen(argv[]) == 26)
         //this specifies that the key must be 26 alphabetical unique characters
         {
             string plaintext = get_string("Plaintext:  ");
