@@ -15,11 +15,13 @@ int main(int argc, string argv[])
         if (only_digits(argv[1]))
         {
             int key = atoi(argv[1]);
+            //need to do this because command-line arguments are enterred as strings
+            //need our key to be an integer in order to do math with it later on
             string plaintext = get_string("plaintext:  ");
 
             for (int i = 0, n = strlen(plaintext); i < n; i++)
             {
-                
+
                 printf("ciphertext: %c", rotate(plaintext[i], key));
                 printf("\n");
             }
