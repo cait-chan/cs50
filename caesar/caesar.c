@@ -12,6 +12,7 @@ int main(int argc, string argv[])
     {
         string plaintext = get_string("plaintext:  ");
 
+        only_digits(plaintext);
 
         printf("ciphertext: ");
         printf("\n");
