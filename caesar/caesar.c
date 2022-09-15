@@ -54,7 +54,7 @@ char rotate(char c, int n)
         //by int n, then will add it back afterwards
         if (isupper(c))
         {
-            (int) c - 'A'
+            return ((int) c - 'A') + (n % 26)
         }
     }
     return c;
