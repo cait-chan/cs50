@@ -5,6 +5,8 @@
 //the key will be a mapping of each of the letters of the alphabet to
 //the letter it should correspond to after the encryption
 
+string substitution(string s);
+
 int main(int argc, string argv[])
 {
     if (argc == 2)
@@ -38,4 +40,12 @@ int main(int argc, string argv[])
     //this will print if there is no command-line argument or too many
     printf("Usage: ./substitution key");
     return 1;
+}
+
+string substitution(string s)
+{
+    //should convert the plaintext to ASCII values
+    //then should can plug in the plaintext letter values into
+    //the key array so that the key values will be substituted
+
 }
