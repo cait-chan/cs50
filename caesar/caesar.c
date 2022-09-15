@@ -44,11 +44,10 @@ bool only_digits(string s)
 {
     for (int i = 0, n = strlen(s); i < n; i++)
     {
-        if (isdigit(s[i]))
+        if (isdigit(s[i]) == 0)
         {
-            return true;
+            return false;
         }
-        return false;
     }
     return false;
 }
