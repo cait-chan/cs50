@@ -13,6 +13,7 @@ int main(int argc, string argv[])
     if (argc == 2)
     {
         if (only_digits(argv[1]))
+        //tests whether the key is numeric
         {
             int key = atoi(argv[1]);
             //need to do this because command-line arguments are enterred as strings
