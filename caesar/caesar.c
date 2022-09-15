@@ -36,4 +36,5 @@ bool only_digits(string plaintext)
         }
         return false;
     }
+    return false;
 }
