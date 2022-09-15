@@ -10,7 +10,7 @@ int main(int argc, string argv[])
         //the number of command-line arguments must be 2
         //one to run the program and the other to specify the key
     {
-        if (isalpha(arg[]))
+        if (isalpha(argv[]) && strlen(argv[]) == 26 && )
         {
 
         }
