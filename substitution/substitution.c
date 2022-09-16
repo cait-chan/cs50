@@ -64,7 +64,7 @@ char substitution(string plaintext, string key)
                 return tolower(c) = key[c - 'a'];
             }
             //else is uppercase
-            return toupper(c) = (key[c 'A']);
+            return toupper(c) = key[c - 'A'];
         }
         return c;
     }
