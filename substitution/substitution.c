@@ -8,7 +8,8 @@
 //the key will be a mapping of each of the letters of the alphabet to
 //the letter it should correspond to after the encryption
 
-string substitution(string s);
+bool alphabetical(string s);
+char substitution(string plaintext, string key);
 
 int main(int argc, string argv[])
 {
@@ -17,7 +18,7 @@ int main(int argc, string argv[])
         //the number of command-line arguments must be 2
         //one to run the program and the other to specify the key
     {
-        if (isalpha(argv[1]) = 0)
+        if (alphabetical(argv[1]) == false)
             //this specifies that the key must be alphabetical
         {
             printf("Key must only contain alphabetic characters.");
@@ -30,7 +31,7 @@ int main(int argc, string argv[])
             printf("Key must not contain repeated characters.");
             return 1;
         }
-        else if (strlen(argv[]) != 26)
+        else if (strlen(argv[1]) != 26)
             //this specifies that the key must be 26 characters
         {
             printf("Key must contain 26 characters.");
@@ -42,13 +43,25 @@ int main(int argc, string argv[])
             string plaintext = get_string("Plaintext:  ");
 
             printf("ciphertext: ");
-            printf("%c", substitution(plaintext));
+            printf("%c", substitution(plaintext, argv[1]));
             printf("\n");
         }
     }
     //this will print if there is no command-line argument or too many
     printf("Usage: ./substitution key");
     return 1;
+}
+
+bool alphabetical(string s)
+{
+    for (int i = 0, n = strlen(s); i < n; i++)
+    {
+        if (isalpha(s[i]) == 0)
+        {
+            return false;
+        }
+    }
+    return true;
 }
 
 char substitution(string plaintext, string key)
@@ -63,10 +76,10 @@ char substitution(string plaintext, string key)
         {
             if (islower(c))
             {
-                return tolower(c) = key[c - 'a'];
+                return c = tolower(key[c - 'a']);
             }
             //else is uppercase
-            return toupper(c) = key[c - 'A'];
+            return c = toupper(key[c - 'A']);
         }
         return c;
     }
