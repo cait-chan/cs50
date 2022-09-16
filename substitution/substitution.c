@@ -9,6 +9,7 @@
 //the letter it should correspond to after the encryption
 
 bool alphabetical(string s);
+bool unique(string s);
 char substitution(string plaintext, string key);
 
 int main(int argc, string argv[])
@@ -24,7 +25,7 @@ int main(int argc, string argv[])
             printf("Key must only contain alphabetic characters.\n");
             return 1;
         }
-        else if (strcasecmp(argv[1], alphabet) != 0)
+        else if (unique(argv[1]) == false)
             //this specifies that the key not have repeated characters
             //this should be case-insensitive
         {
@@ -66,16 +67,21 @@ bool alphabetical(string s)
 
 bool unique(string s)
 {
-    int alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    int key = 's';
+    string alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    for (int i = 0, n = strlen(alphabet); i < n; i++)
+    {
+        int alphabet = 
+    }
+
+    int key = s;
     if (key == alphabet)
     {
-        return true
+        return true;
     }
-    return false
-    //for (int i = 0, n = strlen(s); i < n; i++)
+    return false;
+    for (int i = 0, n = strlen(s); i < n; i++)
     {
-        //int value = s
+        int value = s
     }
 }
 
