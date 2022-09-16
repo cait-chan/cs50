@@ -64,6 +64,21 @@ bool alphabetical(string s)
     return true;
 }
 
+bool unique(string s)
+{
+    int alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    int key = 's';
+    if (key == alphabet)
+    {
+        return true
+    }
+    return false
+    //for (int i = 0, n = strlen(s); i < n; i++)
+    {
+        //int value = s
+    }
+}
+
 char substitution(string plaintext, string key)
 {
     //should convert the plaintext to ASCII values
