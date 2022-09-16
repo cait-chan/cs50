@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <strings.h>
 
 //want to encrypt a message by replacing every letter with another letter
 //the key will be a mapping of each of the letters of the alphabet to
