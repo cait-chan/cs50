@@ -21,20 +21,20 @@ int main(int argc, string argv[])
         if (alphabetical(argv[1]) == false)
             //this specifies that the key must be alphabetical
         {
-            printf("Key must only contain alphabetic characters.");
+            printf("Key must only contain alphabetic characters.\n");
             return 1;
         }
         else if (strcasecmp(argv[1], alphabet) != 0)
             //this specifies that the key not have repeated characters
             //this should be case-insensitive
         {
-            printf("Key must not contain repeated characters.");
+            printf("Key must not contain repeated characters.\n");
             return 1;
         }
         else if (strlen(argv[1]) != 26)
             //this specifies that the key must be 26 characters
         {
-            printf("Key must contain 26 characters.");
+            printf("Key must contain 26 characters.\n");
             return 1;
         }
         else
@@ -48,7 +48,7 @@ int main(int argc, string argv[])
         }
     }
     //this will print if there is no command-line argument or too many
-    printf("Usage: ./substitution key");
+    printf("Usage: ./substitution key\n");
     return 1;
 }
 
