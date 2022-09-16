@@ -49,8 +49,7 @@ int main(int argc, string argv[])
     return 1;
 }
 
-char substitution(string plaintext, string s)
-//string s is argv[1] ie. the key
+char substitution(string plaintext, string key)
 {
     //should convert the plaintext to ASCII values
     //then should can plug in the plaintext letter values into
@@ -62,10 +61,10 @@ char substitution(string plaintext, string s)
         {
             if (islower(c))
             {
-                return c = tolower(s[c]);
+                return tolower(c) = key[c - 'a'];
             }
             //else is uppercase
-            return c = toupper(s[c]);
+            return toupper(c) = (key[c 'A']);
         }
         return c;
     }
