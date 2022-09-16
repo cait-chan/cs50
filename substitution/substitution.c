@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <strings.h>
+#include <ctype.h>
 
 //want to encrypt a message by replacing every letter with another letter
 //the key will be a mapping of each of the letters of the alphabet to
@@ -16,7 +17,7 @@ int main(int argc, string argv[])
         //the number of command-line arguments must be 2
         //one to run the program and the other to specify the key
     {
-        if (isalpha(argv[1]) = )
+        if (isalpha(argv[1]) = 0)
             //this specifies that the key must be alphabetical
         {
             printf("Key must only contain alphabetic characters.");
