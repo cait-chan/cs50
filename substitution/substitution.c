@@ -11,7 +11,7 @@ string substitution(string s);
 
 int main(int argc, string argv[])
 {
-    string comparison = (ABCDEFGHIJKLMNOPQRSTUVWXYZ);
+    string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     if (argc == 2)
         //the number of command-line arguments must be 2
         //one to run the program and the other to specify the key
@@ -22,7 +22,7 @@ int main(int argc, string argv[])
             printf("Key must only contain alphabetic characters.");
             return 1;
         }
-        else if (strcasecmp(argv[1], comparison) != 0)
+        else if (strcasecmp(argv[1], alphabet) != 0)
             //this specifies that the key not have repeated characters
             //this should be case-insensitive
         {
