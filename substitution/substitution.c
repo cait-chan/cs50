@@ -83,4 +83,5 @@ char substitution(string plaintext, string key)
         }
         return c;
     }
+    return 1;
 }
