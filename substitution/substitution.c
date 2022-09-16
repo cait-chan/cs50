@@ -70,7 +70,8 @@ bool unique(string s)
     string alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     for (int i = 0, n = strlen(alphabet); i < n; i++)
     {
-        int alphabet = 
+        int alphatotal += (int) alphabet[i];
+
     }
 
     int key = s;
