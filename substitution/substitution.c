@@ -16,7 +16,7 @@ int main(int argc, string argv[])
         //the number of command-line arguments must be 2
         //one to run the program and the other to specify the key
     {
-        if (isalpha(argv[]) = 0)
+        if (isalpha(argv[1]) = )
             //this specifies that the key must be alphabetical
         {
             printf("Key must only contain alphabetic characters.");
