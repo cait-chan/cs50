@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 #include <strings.h>
 
 //want to encrypt a message by replacing every letter with another letter
@@ -10,7 +11,7 @@ string substitution(string s);
 
 int main(int argc, string argv[])
 {
-    string comparison = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    string comparison = ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     if (argc == 2)
         //the number of command-line arguments must be 2
         //one to run the program and the other to specify the key
