@@ -49,8 +49,11 @@ int main(int argc, string argv[])
         }
     }
     //this will print if there is no command-line argument or too many
-    printf("Usage: ./substitution key\n");
-    return 1;
+    else
+    {
+        printf("Usage: ./substitution key\n");
+        return 1;
+    }
 }
 
 bool alphabetical(string s)
