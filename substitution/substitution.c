@@ -41,7 +41,7 @@ int main(int argc, string argv[])
         else
             //if the key fulfils all requirements, we can prompt the user for plaintext
         {
-            string plaintext = get_string("Plaintext:  ");
+            string plaintext = get_string("plaintext:  ");
 
             printf("ciphertext: ");
             printf("%c", substitution(plaintext, argv[1]));
@@ -70,7 +70,7 @@ bool unique(string s)
     int alphatotal = 0;
     int value = 0;
 
-    string alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     for (int i = 0, n = strlen(alphabet); i < n; i++)
     {
         return alphatotal += (int) alphabet[i];
