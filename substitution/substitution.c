@@ -67,23 +67,25 @@ bool alphabetical(string s)
 
 bool unique(string s)
 {
+    int alphatotal = 0;
+    int value = 0;
+
     string alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     for (int i = 0, n = strlen(alphabet); i < n; i++)
     {
-        int alphatotal += (int) alphabet[i];
-
+        return alphatotal += (int) alphabet[i];
     }
 
-    int key = s;
-    if (key == alphabet)
+    for (int i = 0, n = strlen(s); i < n; i++)
+    {
+        return value += s[i];
+    }
+
+    if (alphatotal == value)
     {
         return true;
     }
     return false;
-    for (int i = 0, n = strlen(s); i < n; i++)
-    {
-        int value = s
-    }
 }
 
 char substitution(string plaintext, string key)
