@@ -86,7 +86,7 @@ bool unique(string s)
 
     for (int i = 0, n = strlen(s); i < n; i++)
     {
-        return value += s[i];
+        return value += (int) s[i];
     }
     return value;
 
