@@ -82,11 +82,13 @@ bool unique(string s)
     {
         return alphatotal += (int) alphabet[i];
     }
+    return alphatotal;
 
     for (int i = 0, n = strlen(s); i < n; i++)
     {
         return value += s[i];
     }
+    return value;
 
     if (alphatotal == value)
     {
