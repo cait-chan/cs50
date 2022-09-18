@@ -44,7 +44,11 @@ int main(int argc, string argv[])
             string plaintext = get_string("plaintext:  ");
 
             printf("ciphertext: ");
-            printf("%c", substitution(plaintext, argv[1]));
+
+            for (int i = 0, n = strlen(plaintext); i < n; i++)
+            {
+                printf("%c", substitution(plaintext, argv[1]));
+            }
             printf("\n");
         }
     }
