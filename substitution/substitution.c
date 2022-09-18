@@ -10,7 +10,7 @@
 
 bool alphabetical(string s);
 bool unique(string s);
-char substitution(string plaintext, string key);
+char substitution(char c, string key);
 
 int main(int argc, string argv[])
 {
@@ -47,7 +47,7 @@ int main(int argc, string argv[])
 
             for (int i = 0, n = strlen(plaintext); i < n; i++)
             {
-                printf("%c", substitution(plaintext, argv[1]));
+                printf("%c", substitution(plaintext[i], argv[1]));
             }
             printf("\n");
         }
@@ -95,12 +95,11 @@ bool unique(string s)
     return false;
 }
 
-char substitution(string plaintext, string key)
+char substitution(char c, string key)
 {
     //should convert the plaintext to ASCII values
     //then should can plug in the plaintext letter values into
     //the key array so that the key values will be substituted
-    char c = plaintext[i];
     if (isalpha(c))
     {
         if (islower(c))
