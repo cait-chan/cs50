@@ -100,19 +100,15 @@ char substitution(string plaintext, string key)
     //should convert the plaintext to ASCII values
     //then should can plug in the plaintext letter values into
     //the key array so that the key values will be substituted
-    for (int i = 0, n = strlen(plaintext); i < n; i++)
+    char c = plaintext[i];
+    if (isalpha(c))
     {
-        char c = plaintext[i];
-        if (isalpha(c))
+        if (islower(c))
         {
-            if (islower(c))
-            {
-                return c = tolower(key[c - 'a']);
-            }
-            //else is uppercase
-            return c = toupper(key[c - 'A']);
+            return c = tolower(key[c - 'a']);
         }
-        return c;
+        //else is uppercase
+        return c = toupper(key[c - 'A']);
     }
-    return 1;
+    return c;
 }
