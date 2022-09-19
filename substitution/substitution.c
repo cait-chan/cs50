@@ -74,8 +74,9 @@ bool alphabetical(string s)
 bool unique(string s)
 {
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    string key = toupper(s);
 
-    if (atoi(alphabet) == atoi(s))
+    if (atoi(alphabet) == atoi(key))
     {
         return true;
     }
