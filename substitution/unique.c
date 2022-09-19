@@ -22,7 +22,7 @@ bool unique(string s)
     {
         for (int j = 0, o = strlen(s); j < o; j++)
         {
-            if (j != i)
+            if (s[j] != alphabet[i])
             {
                 j++;
             }
