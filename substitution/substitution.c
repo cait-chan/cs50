@@ -73,7 +73,9 @@ bool alphabetical(string s)
 
 bool unique(string s)
 {
-    if (atoi("ABCDEFGHIJKLMNOPQRSTUVWXYZ") == atoi(s))
+    string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    if (atoi(alphabet) == atoi(s))
     {
         return true;
     }
