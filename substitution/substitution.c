@@ -79,8 +79,8 @@ bool unique(string s)
 
     for (int i = 0, n = strlen(alphabet); i < n; i++)
     {
-        return alphatotal += (int) alphabet[i];
-        return value += (int) toupper(s[i]);
+        return alphatotal += alphabet[i];
+        return value += toupper(s[i]);
     }
 
     if (alphatotal == value)
