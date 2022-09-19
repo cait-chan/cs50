@@ -73,15 +73,15 @@ bool alphabetical(string s)
 
 bool unique(string s)
 {
-    for (int i = 0, n = strlen(s); i < n; i++)
+    for (int i = 0, n = strlen(s); i < n; i += 0)
     {
-        for (int j = 1; j < n; j += 0)
+        for (int j = 1; j < n; j += (i + 1))
         {
             if (toupper(s[i]) == toupper(s[j]))
             {
                 return false;
             }
-            j++;
+            i++;
         }
     }
     return true;
