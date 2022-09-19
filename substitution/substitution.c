@@ -74,8 +74,11 @@ bool alphabetical(string s)
 
 bool unique(string s)
 {
-    int alphabet = atoi("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-    int value = atoi(s);
+    int alphabet = 0;
+    int value = 0;
+    
+    return alphabet = atoi("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+    return value = atoi(s);
 
     if (alphabet == value)
     {
