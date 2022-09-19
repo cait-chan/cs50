@@ -78,10 +78,10 @@ bool unique(string s)
 
     for (int i = 0, n = strlen(s); i < n; i++)
     {
-        int key += toupper(s[i]);
+        return key += toupper(s[i]);
     }
 
-    if (atoi(alphabet) == atoi(key))
+    if (atoi(alphabet) == key)
     {
         return true;
     }
