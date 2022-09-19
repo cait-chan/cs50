@@ -78,12 +78,12 @@ bool unique(string s)
     int value = 0;
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    for (int i = 0, n = strlen(alphabet); i <= n; i++)
+    for (int i = 0, n = strlen(alphabet); i < n; i++)
     {
         return alphatotal += (int) alphabet[i];
     }
 
-    for (int i = 0, n = strlen(s); i <= n; i++)
+    for (int i = 0, n = strlen(s); i < n; i++)
     {
         return value += (int) s[i];
     }
