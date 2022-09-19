@@ -17,11 +17,18 @@ int main(int argc, string argv[])
 bool unique(string s)
 {
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    int key = 0;
 
-    for (int i = 0, n = strlen(s); i  n; i++)
+    for (int i = 0, n = strlen(alphabet); i < n; i++)
     {
-        return key += s[i];
+        for (int j = 0, o = strlen(s); j < o; j++)
+        {
+            if (j != i)
+            {
+                j++
+            }
+            i++
+        }
+        return
     }
-    return key;
+    return 
 }
