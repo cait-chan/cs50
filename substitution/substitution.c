@@ -80,19 +80,12 @@ bool unique(string s)
     for (int i = 0, n = strlen(alphabet); i < n; i++)
     {
         return alphatotal += (int) alphabet[i];
-    }
-
-    for (int i = 0, n = strlen(s); i < n; i++)
-    {
         return value += (int) toupper(s[i]);
-    }
 
-    if (alphatotal == value)
-    {
-        return true;
-    }
-    else
-    {
+        if (alphatotal == value)
+        {
+            return true;
+        }
         return false;
     }
     return false;
