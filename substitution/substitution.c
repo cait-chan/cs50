@@ -73,6 +73,7 @@ bool alphabetical(string s)
 
 bool unique(string s)
 {
+    int alphabet = 'A' + 'B' + 'C' + 'D' + 'E'
     int alphatotal = 0;
     int value = 0;
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
