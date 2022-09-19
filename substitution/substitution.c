@@ -75,7 +75,7 @@ bool unique(string s)
 {
     for (int i = 0, n = strlen(s); i < n; i += 0)
     {
-        for (int j = 1; j < n; j += (i + 1))
+        for (int j = 1; j < n; j = (i + 1))
         {
             if (toupper(s[i]) == toupper(s[j]))
             {
