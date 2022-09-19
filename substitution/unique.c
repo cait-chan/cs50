@@ -28,8 +28,11 @@ bool unique(string s)
                 key += 0;
                 j++;
             }
-            key += 1;
-            i++;
+            else
+            {
+                key += 1;
+                i++;
+            }
         }
     }
     if (key == 26)
