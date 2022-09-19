@@ -74,12 +74,13 @@ bool alphabetical(string s)
 bool unique(string s)
 {
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    string t = toupper(s);
     int key = 0;
     int total = 0;
 
-    for (int i = 0, n = strlen(s); i < n; i++)
+    for (int i = 0, n = strlen(t); i < n; i++)
     {
-        key += s[i];
+        key += t[i];
         total += alphabet[i];
     }
 
