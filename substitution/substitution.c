@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 //want to encrypt a message by replacing every letter with another letter
 //the key will be a mapping of each of the letters of the alphabet to
@@ -73,18 +74,10 @@ bool alphabetical(string s)
 
 bool unique(string s)
 {
-    int alphabet = 'A' + 'B' + 'C' + 'D' + 'E'
-    int alphatotal = 0;
-    int value = 0;
-    string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    int alphabet = atoi("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+    int value = atoi(s);
 
-    for (int i = 0, n = strlen(alphabet); i < n; i++)
-    {
-        return alphatotal += alphabet[i];
-        return value += toupper(s[i]);
-    }
-
-    if (alphatotal == value)
+    if (alphabet == value)
     {
         return true;
     }
