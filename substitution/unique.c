@@ -24,11 +24,11 @@ bool unique(string s)
         {
             if (j != i)
             {
-                j++
+                j++;
             }
-            i++
+            i++;
         }
-        return
+        return false;
     }
-    return 
+    return true;
 }
