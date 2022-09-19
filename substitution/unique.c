@@ -19,15 +19,17 @@ bool unique(string s)
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     int key = 0;
 
-    for (int i = 0, n = strlen(alphabet); i < n; i++)
+    for (int i = 0, n = strlen(alphabet); i < n; i += 0)
     {
-        for (int j = 0, o = strlen(s); j < o; j++)
+        for (int j = 0, o = strlen(s); j < o; j += 0)
         {
             if (s[j] != alphabet[i])
             {
                 return key += 0;
+                j++;
             }
             return key += 1;
+            i++;
         }
     }
     if (key == 26)
