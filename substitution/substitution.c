@@ -79,7 +79,7 @@ bool unique(string s)
 
     for (int i = 0, n = strlen(s); i < n; i++)
     {
-        return key = (s[i]);
+        return key = s[i];
         return total += key;
     }
 
