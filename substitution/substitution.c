@@ -80,9 +80,10 @@ bool unique(string s)
     for (int i = 0, n = strlen(s); i < n; i++)
     {
         key += s[i];
+        total += alphabet[i];
     }
 
-    if (atoi(alphabet) == key)
+    if (total == key)
     {
         return true;
     }
