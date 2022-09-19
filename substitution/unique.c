@@ -25,10 +25,10 @@ bool unique(string s)
         {
             if (s[j] != alphabet[i])
             {
-                return key += 0;
+                key += 0;
                 j++;
             }
-            return key += 1;
+            key += 1;
             i++;
         }
     }
