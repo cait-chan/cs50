@@ -81,12 +81,11 @@ bool unique(string s)
     {
         return alphatotal += (int) alphabet[i];
         return value += (int) toupper(s[i]);
+    }
 
-        if (alphatotal == value)
-        {
-            return true;
-        }
-        return false;
+    if (alphatotal == value)
+    {
+        return true;
     }
     return false;
 }
