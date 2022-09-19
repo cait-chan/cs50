@@ -20,9 +20,10 @@ bool unique(string s)
 
     for (int i = 0, n = strlen(s); i < n; i += 0)
     {
-        scanf("%c", &s[i])
-    {
+        int a = scanf("%c", &s);
+        if (a = 2)
+        {
+            return false;
+        }
         return true;
-    }
-    return false;
 }
