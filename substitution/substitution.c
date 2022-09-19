@@ -14,7 +14,6 @@ char substitution(char c, string key);
 
 int main(int argc, string argv[])
 {
-    string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     if (argc == 2)
         //the number of command-line arguments must be 2
         //one to run the program and the other to specify the key
@@ -76,7 +75,7 @@ bool unique(string s)
 {
     int alphabet = 0;
     int value = 0;
-    
+
     return alphabet = atoi("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
     return value = atoi(s);
 
