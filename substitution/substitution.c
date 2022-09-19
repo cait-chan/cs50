@@ -91,6 +91,10 @@ bool unique(string s)
     {
         return true;
     }
+    else
+    {
+        return false;
+    }
     return false;
 }
 
