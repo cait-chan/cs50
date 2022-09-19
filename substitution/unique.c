@@ -26,7 +26,10 @@ bool unique(string s)
             {
                 j++;
             }
-            i++;
+            else
+            {
+                i++;
+            }
         }
         return false;
     }
