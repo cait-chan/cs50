@@ -74,7 +74,12 @@ bool alphabetical(string s)
 bool unique(string s)
 {
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    string key = toupper(s);
+    int key = 0;
+
+    for (int i = 0, n = strlen(s); i < n; i++)
+    {
+        int key += toupper(s[i]);
+    }
 
     if (atoi(alphabet) == atoi(key))
     {
