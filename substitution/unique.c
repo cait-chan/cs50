@@ -18,15 +18,13 @@ bool unique(string s)
 {
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     int key = 0;
-    int total = 0;
 
     for (int i = 0, n = strlen(s); i < n; i++)
     {
-        return key = s[i];
-        return total += key;
+        return key += s[i];
     }
-
-    if (atoi(alphabet) == total)
+    
+    if (atoi(alphabet) == key)
     {
         return true;
     }
