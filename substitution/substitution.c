@@ -75,6 +75,7 @@ bool unique(string s)
 {
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     string t = toupper(s);
+
     int key = 0;
     int total = 0;
 
