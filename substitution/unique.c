@@ -17,25 +17,10 @@ int main(int argc, string argv[])
 bool unique(string s)
 {
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    int key = 0;
 
-    for (int i = 0, n = strlen(alphabet); i < n; i += 0)
+    for (int i = 0, n = strlen(s); i < n; i += 0)
     {
-        for (int j = 0, o = strlen(s); j < o; j += 0)
-        {
-            if (s[j] != alphabet[i])
-            {
-                key += 0;
-                j++;
-            }
-            else
-            {
-                key += 1;
-                i++;
-            }
-        }
-    }
-    if (key == 26)
+        scanf("%s", s)
     {
         return true;
     }
