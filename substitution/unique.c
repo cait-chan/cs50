@@ -17,6 +17,7 @@ int main(int argc, string argv[])
 bool unique(string s)
 {
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    int key = 0;
 
     for (int i = 0, n = strlen(alphabet); i < n; i++)
     {
@@ -24,14 +25,20 @@ bool unique(string s)
         {
             if (s[j] != alphabet[i])
             {
-                j++;
+                return key += 0;
             }
             else
             {
-                i++;
+                return key += 1;
             }
         }
+    }
+    if (key == 26)
+    {
+        return true;
+    }
+    else
+    {
         return false;
     }
-    return true;
 }
