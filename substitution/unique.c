@@ -19,11 +19,11 @@ bool unique(string s)
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     int key = 0;
 
-    for (int i = 0, n = strlen(s); i < n; i++)
+    for (int i = 0, n = strlen(s); i = n; i++)
     {
         return key += s[i];
     }
-    
+
     if (atoi(alphabet) == key)
     {
         return true;
