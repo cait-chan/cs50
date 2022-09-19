@@ -27,18 +27,12 @@ bool unique(string s)
             {
                 return key += 0;
             }
-            else
-            {
-                return key += 1;
-            }
+            return key += 1;
         }
     }
     if (key == 26)
     {
         return true;
     }
-    else
-    {
-        return false;
-    }
+    return false;
 }
