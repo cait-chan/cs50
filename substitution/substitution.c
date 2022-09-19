@@ -75,19 +75,19 @@ bool unique(string s)
 {
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     int key = 0;
-    int total = 0;
 
     for (int i = 0, n = strlen(s); i < n; i++)
     {
-        key += toupper(s[i]);
-        total += alphabet[i];
+        for (int j = 1; j < n; j += 0)
+        {
+            if (s[i] == s[j])
+            {
+                return false;
+            }
+            j++;
+        }
     }
-
-    if (total == key)
-    {
-        return true;
-    }
-    return false;
+    return true;
 }
 
 char substitution(char c, string key)

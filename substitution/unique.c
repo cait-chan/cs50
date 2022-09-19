@@ -11,21 +11,27 @@ int main(int argc, string argv[])
     {
         printf("False\n");
     }
-    printf("True\n");
+    else
+    {
+        printf("True\n");
+    }
 }
 
 bool unique(string s)
 {
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    int key = 0;
 
-    for (int i = 0, n = strlen(s); i < n; i += 0)
+    for (int i = 0, n = strlen(s); i < n; i++)
     {
-        int a = scanf("%m[a-z]", &s);
-        if (a == 2)
+        for (int j = 1; j < n; j += 0)
         {
-            return false;
+            if (s[i] == s[j])
+            {
+                return false;
+            }
+            j++;
         }
-        return true;
     }
-    return
+    return true;
 }
