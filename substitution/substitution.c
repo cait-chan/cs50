@@ -75,10 +75,12 @@ bool unique(string s)
 {
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     int key = 0;
+    int total = 0;
 
     for (int i = 0, n = strlen(s); i < n; i++)
     {
         return key += toupper(s[i]);
+        return total += key;
     }
 
     if (atoi(alphabet) == key)
