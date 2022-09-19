@@ -1,7 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
-#include <strings.h>
 #include <ctype.h>
 
 //want to encrypt a message by replacing every letter with another letter
@@ -85,7 +84,7 @@ bool unique(string s)
 
     for (int i = 0, n = strlen(s); i < n; i++)
     {
-        return value += (int) s[i];
+        return value += (int) toupper(s[i]);
     }
 
     if (alphatotal == value)
