@@ -73,10 +73,13 @@ bool alphabetical(string s)
 
 bool unique(string s)
 {
+    //this function moves through the key string and compares each letter to the
+    //ones proceeding from it
     for (int i = 0, n = strlen(s); i < n; i += 0)
     {
         for (int j = 1; j < n; j = (i + 1))
         {
+            //this ensures the character comparison works between lowercase and uppercase
             if (toupper(s[i]) == toupper(s[j]))
             {
                 return false;
