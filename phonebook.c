@@ -16,6 +16,7 @@ int main(void)
     //difficult to use this using a large database when blind trust is relating the name to the phone number
 
     person people[2];
+    //this array called people stores persons which are composed of a name and number
 
     people[0].name = "Carter";
     //the dot means go inside the variable called name and give it the value of "Carter"
