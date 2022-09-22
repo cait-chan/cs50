@@ -3,6 +3,7 @@
 
 int main(void)
 {
-    int numbers[7];
-    
+    int numbers[] = {4, 6, 8, 2, 7, 5, 0};
+    //can use curly braces to define a set of values in an array
+
 }
