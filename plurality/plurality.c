@@ -80,6 +80,10 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    
+    for (int i = 0; i < voter_count; i++)
+    {
+        if (name == argv[i + 1])
+        {
+            candidates[i].votes += 1;
     return;
 }
