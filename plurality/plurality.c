@@ -83,6 +83,10 @@ void print_winner(void)
 {
     for (int i = 0; i < voter_count; i++)
     {
+        for (int j = 0; j < i; j++)
+        {
+            if (candidates[i].votes == candidates[j].votes)
+        }
         if ( == )
         {
             printf("%s\n", );
