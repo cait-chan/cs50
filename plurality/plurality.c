@@ -18,6 +18,7 @@ candidate candidates[MAX];
 
 // Number of candidates
 int candidate_count;
+int voter_count;
 
 // Function prototypes
 bool vote(string name);
@@ -82,8 +83,8 @@ void print_winner(void)
 {
     for (int i = 0; i < voter_count; i++)
     {
-        if (name == argv[i + 1])
+        if ( == )
         {
-            candidates[i].votes += 1;
+            printf("%s\n", );
     return;
 }
