@@ -1,15 +1,18 @@
-sort1 uses: Selection Sort
+sort1 uses: Bubble Sort
 
 How do you know?:
     0.073s for sorted5000
         This is the longest time for the sorted data set because it has to run through the entire data set, whereas the other two don't.
+    0.107s for random5000
 
 sort2 uses: Merge Sort
 
 How do you know?:
     0.057s for sorted5000
+    0.055s for random5000
 
-sort3 uses: Bubble Sort
+sort3 uses: Selection Sort
 
 How do you know?:
     0.053s for sorted5000
+    0.067s for random5000
