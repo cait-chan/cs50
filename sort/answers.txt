@@ -1,15 +1,15 @@
-sort1 uses: Merge Sort
+sort1 uses: Selection Sort
 
 How do you know?:
     0.073s for sorted5000
         This is the longest time for the sorted data set because it has to run through the entire data set, whereas the other two don't.
 
-sort2 uses:
+sort2 uses: Merge Sort
 
 How do you know?:
     0.057s for sorted5000
 
-sort3 uses: 
+sort3 uses: Bubble Sort
 
 How do you know?:
     0.053s for sorted5000
