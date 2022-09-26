@@ -83,7 +83,7 @@ void print_winner(void)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = 0; j < i; j++)
+        for (int j = 0; j < candidate_count; j++)
         {
             if (candidates[i].votes == candidates[j].votes)
         }
