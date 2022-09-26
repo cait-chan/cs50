@@ -1,11 +1,15 @@
-sort1 uses: TODO
+sort1 uses: Merge Sort
 
-How do you know?: TODO
+How do you know?:
+    0.073s for sorted5000
+        This is the longest time for the sorted data set because it has to run through the entire data set, whereas the other two don't.
 
-sort2 uses: TODO
+sort2 uses:
 
-How do you know?: TODO
+How do you know?:
+    0.057s for sorted5000
 
-sort3 uses: TODO
+sort3 uses: 
 
-How do you know?: TODO
+How do you know?:
+    0.053s for sorted5000
