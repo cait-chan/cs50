@@ -66,7 +66,18 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-    // TODO
+    if (name == argv[1])
+    {
+
+    }
+    else if
+    {
+
+    }
+    else if
+    {
+        
+    }
     return false;
 }
 
