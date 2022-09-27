@@ -81,6 +81,8 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
+    //want to compare each of the candidates vote totals to see who has the most
+    //
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = 1; j < candidate_count; j = i + 1)
