@@ -93,6 +93,8 @@ void print_winner(void)
         }
     }
 
+    //this will run through the candidates to see whose vote totals are equal to the vote total variable value
+    //this will determine who wins the election and subsequently whose name is printed
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes == vote_total)
@@ -100,4 +102,5 @@ void print_winner(void)
             printf("%s\n", candidates[i].name);
         }
     }
+    return;
 }
