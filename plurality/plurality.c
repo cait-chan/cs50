@@ -91,8 +91,9 @@ void print_winner(void)
             }
             else if (candidates[i].votes < candidates[j].votes)
             {
-
+                i++;
             }
+            else if
         }
             printf("%s\n", );
     return;
