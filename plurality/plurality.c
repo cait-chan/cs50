@@ -99,6 +99,7 @@ void print_winner(void)
                 i++;
             }
         }
+        printf("%s\n", winner);
+        return;
     }
-    printf("%s\n", winner);
 }
