@@ -92,22 +92,6 @@ void print_winner(void)
         return;
     }
 
-    for (int i = 0; i < candidate_count; i++)
-    {
-        if (candidate[i] > candidate[i + 1])
-        {
-            string winner = candidate[i];
-                winner comparison to candidate C
-                    ...
-                    if winner = candidate[i]
-                        printf("%s\n", winner)
-                        printf("%s\n", candidate[i]);
-                    printf("%s\n", winner)
-        candidate B = winner
-            winnter comparison to candidate C
-                ...
-    }
-
     string winner = 0;
 
     for (int i = 0; i < candidate_count; i += 0)
@@ -124,8 +108,6 @@ void print_winner(void)
                 winner = candidates[j].name;
                 i++;
             }
-            
         }
-            printf("%s\n", );
-    return;
+    printf("%s\n", winner);
 }
