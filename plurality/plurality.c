@@ -99,10 +99,24 @@ void print_winner(void)
                 winner1 = candidates[j].name;
                 i++;
             }
-            else
+            else if (candidates[i].votes == candidates[j].votes)
             {
-
+                winner1 = candidates[i].name;
+                winner2 = candidates[j].name;
+                i++;
+                j++;
             }
         }
+    }
+    if (!(winner2 == 0))
+    {
+        printf("%s\n", winner1);
+        printf("%s\n", winner2);
+        return;
+    }
+    else
+    {
+        printf("%s\n", winner1);
+        return;
     }
 }
