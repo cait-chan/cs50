@@ -82,7 +82,8 @@ void print_winner(void)
 {
     //want to compare each of the candidates vote totals to see who has the most
 
-    string winner = 0;
+    string winner1 = 0;
+    string winner2 = 0;
 
     for (int i = 0; i < candidate_count; i += 0)
     {
@@ -90,16 +91,21 @@ void print_winner(void)
         {
             if (candidates[i].votes > candidates[j].votes)
             {
-                winner = candidates[i].name;
+                winner1 = candidates[i].name;
                 j++;
             }
             else if (candidates[i].votes < candidates[j].votes)
             {
-                winner = candidates[j].name;
+                winner1 = candidates[j].name;
                 i++;
             }
+            else
+            {
+
+            }
+            printf("%s\n", winner1);
+            printf("%s\n", winner2);
+            return;
         }
-        printf("%s\n", winner);
-        return;
     }
 }
