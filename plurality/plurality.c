@@ -81,42 +81,23 @@ bool vote(string name)
 void print_winner(void)
 {
     //want to compare each of the candidates vote totals to see who has the most
+    int vote_total = 0;
 
-    string winner1 = 0;
-    string winner2 = 0;
-
-    for (int i = 0; i < candidate_count; i += 0)
+    //this will run through each of the candidates vote totals to see who has the highest count
+    //then the highest count will be set to the vote total variable
+    for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = 1; j < candidate_count; j += 0)
+        if (candidates[i].votes > vote_total)
         {
-            if (candidates[i].votes > candidates[j].votes)
-            {
-                winner1 = candidates[i].name;
-                j++;
-            }
-            else if (candidates[i].votes < candidates[j].votes)
-            {
-                winner1 = candidates[j].name;
-                i++;
-            }
-            else if (candidates[i].votes == candidates[j].votes)
-            {
-                winner1 = candidates[i].name;
-                winner2 = candidates[j].name;
-                i = candidate_count;
-                j = candidate_count;
-            }
+            vote_total = candidates[i].votes;
         }
     }
-    if (!(winner2 == 0))
+
+    for (int i = 0; i < candidate_count; i++)
     {
-        printf("%s\n", winner1);
-        printf("%s\n", winner2);
-        return;
-    }
-    else
-    {
-        printf("%s\n", winner1);
-        return;
+        if (candidates[i].votes == vote_total)
+        {
+            printf("%s\n", candidates[i].name);
+        }
     }
 }
