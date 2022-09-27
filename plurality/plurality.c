@@ -103,9 +103,6 @@ void print_winner(void)
             {
 
             }
-            printf("%s\n", winner1);
-            printf("%s\n", winner2);
-            return;
         }
     }
 }
