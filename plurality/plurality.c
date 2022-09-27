@@ -92,12 +92,11 @@ void print_winner(void)
         return;
     }
 
-
-    pseudocode
     for (int i = 0; i < candidate_count; i++)
     {
-        if candidate A > candidate B
-            candidate A = winner
+        if (candidate[i] > candidate[i + 1])
+        {
+            string winner = candidate[i];
                 winner comparison to candidate C
                     ...
                     if winner = candidate[i]
@@ -116,6 +115,7 @@ void print_winner(void)
         {
             if (candidates[i].votes > candidates[j].votes)
             {
+                string winner = candidates[i].name;
                 j++;
             }
             else if (candidates[i].votes < candidates[j].votes)
