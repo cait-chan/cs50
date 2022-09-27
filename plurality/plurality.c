@@ -86,7 +86,17 @@ void print_winner(void)
     pseudocode
     for (int i = 0; i < candidate_count; i++)
     {
-        
+        if candidate A > candidate B
+            candidate A = winner
+                winner comparison to candidate C
+                    ...
+                    if winner = candidate[i]
+                        printf("%s\n", winner)
+                        printf("%s\n", candidate[i]);
+                    printf("%s\n", winner)
+        candidate B = winner
+            winnter comparison to candidate C
+                ...
     }
 
 
