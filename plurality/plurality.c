@@ -103,8 +103,6 @@ void print_winner(void)
             {
                 winner1 = candidates[i].name;
                 winner2 = candidates[j].name;
-                i++;
-                j++;
             }
         }
     }
