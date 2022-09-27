@@ -18,7 +18,6 @@ candidate candidates[MAX];
 
 // Number of candidates
 int candidate_count;
-int voter_count;
 
 // Function prototypes
 bool vote(string name);
@@ -76,6 +75,7 @@ bool vote(string name)
         }
         return false;
     }
+    return false;
 }
 
 // Print the winner (or winners) of the election
@@ -85,7 +85,7 @@ void print_winner(void)
     //base case
     for (int i = 0; i < candidate_count; i += 0)
     {
-        if (candidates[i].votes == 0);
+        if (candidates[i].votes == 0)
         {
             i++;
         }
@@ -110,4 +110,5 @@ void print_winner(void)
             }
         }
     printf("%s\n", winner);
+    }
 }
