@@ -83,6 +83,13 @@ void print_winner(void)
 {
     //want to compare each of the candidates vote totals to see who has the most
     //
+    pseudocode
+    for (int i = 0; i < candidate_count; i++)
+    {
+        
+    }
+
+
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = 1; j < candidate_count; j = i + 1)
