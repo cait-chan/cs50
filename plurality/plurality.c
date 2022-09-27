@@ -73,7 +73,6 @@ bool vote(string name)
             candidates[i].votes += 1;
             return true;
         }
-        return false;
     }
     return false;
 }
@@ -82,15 +81,6 @@ bool vote(string name)
 void print_winner(void)
 {
     //want to compare each of the candidates vote totals to see who has the most
-    //base case
-    for (int i = 0; i < candidate_count; i += 0)
-    {
-        if (candidates[i].votes == 0)
-        {
-            i++;
-        }
-        return;
-    }
 
     string winner = 0;
 
