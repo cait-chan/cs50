@@ -108,21 +108,23 @@ void print_winner(void)
                 ...
     }
 
+    string winner = 0;
 
-    for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i += 0)
     {
-        for (int j = 1; j < candidate_count; j = i + 1)
+        for (int j = 1; j < candidate_count; j += 0)
         {
             if (candidates[i].votes > candidates[j].votes)
             {
-                string winner = candidates[i].name;
+                winner = candidates[i].name;
                 j++;
             }
             else if (candidates[i].votes < candidates[j].votes)
             {
+                winner = candidates[j].name;
                 i++;
             }
-            else if
+            
         }
             printf("%s\n", );
     return;
