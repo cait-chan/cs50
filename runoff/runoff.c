@@ -138,6 +138,7 @@ bool vote(int voter, int rank, string name)
                 preferences[voter][rank] = rank;
                 return true;
             }
+            return false;
         }
     }
     return false;
