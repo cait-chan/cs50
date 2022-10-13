@@ -140,7 +140,10 @@ bool vote(int voter, int rank, string name)
                 rank++;
                 return true;
             }
-            return false;
+            else
+            {
+                return false;
+            }
         }
     }
     return false;
