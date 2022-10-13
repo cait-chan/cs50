@@ -129,7 +129,7 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-    for (int i = voter; voter < voter_count; i++)
+    for (voter = voter; voter < voter_count; voter++)
     {
         rank = 0;
         for (int j = 0; j < candidate_count; j++)
