@@ -162,12 +162,13 @@ void tabulate(void)
 bool print_winner(void)
 {
     int half_candidate = round(0.5 * candidate_count);
+    int winner;
 
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes >= half_candidate)
         {
-            int winner = candidates[i].name;
+            winner = candidates[i].name;
         }
     }
     printf("%s\n", winner);
