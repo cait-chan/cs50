@@ -161,7 +161,7 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    int half_candidate = (0.5 * candidate_count);
+    int half_candidate = round(0.5 * candidate_count);
     string winner = candidates[0].name;
     int winner_votes = candidates[0].votes;
 
