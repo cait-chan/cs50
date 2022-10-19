@@ -162,8 +162,8 @@ void tabulate(void)
 bool print_winner(void)
 {
     int half_candidate = round(0.5 * candidate_count);
-    string winner = candidates[0].name;
-    int winner_votes = candidates[0].votes;
+    string winner = candidates[].name;
+    int winner_votes = candidates[].votes;
 
     for (int i = 0; i < candidate_count; i++)
     {
