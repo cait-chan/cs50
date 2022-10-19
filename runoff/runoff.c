@@ -167,21 +167,18 @@ bool print_winner(void)
 
     for (int i = 0; i < candidate_count; i++)
     {
-        if (!(candidates[i].votes >= half_candidate))
-        {
-            return false;
-        }
-    }
-
-    for (int i = 0; i < candidate_count; i++)
-    {
         if (candidates[i].votes > winner_votes)
         {
             winner = candidates[i].name;
         }
+
+        if (candidates[i].votes >= half_candidate)
+        {
+            printf("%s\n", winner);
+            return true;
+        }
+        return false;
     }
-    printf("%s\n", winner);
-    return true;
 }
 
 // Return the minimum number of votes any remaining candidate has
