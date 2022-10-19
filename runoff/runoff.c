@@ -169,13 +169,14 @@ bool print_winner(void)
     {
         if (!(candidates[i].votes >= half_candidate))
         {
-            if  (candidates[i].votes > winner_votes)
-            {
-                winner = candidates[i].name;
-            }
-            printf("%s\n", winner);
-            return true;
+            return false;
         }
+        else if (candidates[i].votes > winner_votes)
+        {
+            winner = candidates[i].name;
+        }
+        printf("%s\n", winner);
+        return true;
     }
     return false;
 }
