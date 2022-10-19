@@ -175,10 +175,9 @@ bool print_winner(void)
         {
             winner = candidates[i].name;
         }
-        printf("%s\n", winner);
-        return true;
     }
-    return false;
+    printf("%s\n", winner);
+    return true;
 }
 
 // Return the minimum number of votes any remaining candidate has
