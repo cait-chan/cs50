@@ -171,14 +171,15 @@ bool print_winner(void)
         {
             return false;
         }
+    }
 
+    for (int i = 0; i < candidate_count; i++)
+    {
         if (candidates[i].votes > winner_votes)
         {
             winner = candidates[i].name;
         }
     }
-
-    //
     printf("%s\n", winner);
     return true;
 }
