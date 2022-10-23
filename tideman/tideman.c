@@ -66,7 +66,7 @@ int main(int argc, string argv[])
     }
 
     pair_count = 0;
-    int voter_count = get_int("Number of voters: ");
+    voter_count = get_int("Number of voters: ");
 
     // Query for votes
     for (int i = 0; i < voter_count; i++)
@@ -121,7 +121,7 @@ void record_preferences(int ranks[])
         {
             if (ranks[i] < ranks[j])
             {
-                preferences[i][j]++
+                preferences[i][j]++;
             }
         }
     }
@@ -169,11 +169,11 @@ void lock_pairs(void)
 {
     for (int i = 0; i <= pair_count; i++)
     {
-        if (pairs[i].winner = pairs[pair_count - 1].loser)
+        if (pairs[i].winner == pairs[pair_count - 1].loser)
         {
             i++;
         }
-        locked[pairs[i].winner][pairs[i].loser];
+        locked = locked[pairs[i].winner][pairs[i].loser];
     }
     return;
 }
@@ -181,6 +181,6 @@ void lock_pairs(void)
 // Print the winner of the election
 void print_winner(void)
 {
-    // TODO
+    printf("%s \n", pairs[0].winner);
     return;
 }
