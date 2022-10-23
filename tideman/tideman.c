@@ -158,18 +158,19 @@ void sort_pairs(void)
     {
         if ((pairs[i].winner - pairs[i].loser) > strength)
         {
-            pairs[i] = pairs[0];
+            pairs[i] = pairs[i - 1];
         }
-
     }
-
     return;
 }
 
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    // TODO
+    for (int i = 0; i <= candidate_count; i++)
+    {
+        
+    }
     return;
 }
 
