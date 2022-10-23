@@ -158,7 +158,7 @@ void sort_pairs(void)
     {
         if ((pairs[i].winner - pairs[i].loser) > strength)
         {
-            
+            pairs[i] = pairs[0];
         }
 
     }
