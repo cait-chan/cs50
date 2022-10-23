@@ -173,7 +173,7 @@ void lock_pairs(void)
         {
             i++;
         }
-        locked = locked[pairs[i].winner][pairs[i].loser];
+        locked[pairs[i].winner][pairs[i].loser] = true;
     }
     return;
 }
