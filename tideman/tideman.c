@@ -189,8 +189,7 @@ void print_winner(void)
         if (pairs[i].winner >= winner_votes)
         {
             winners++;
-            winner_[i] = 
-            int winner = pairs[i].winner;
+            winner_[i] = pairs[i].winner;
         }
         else if (pairs[i].winner == winner_votes)
         {
