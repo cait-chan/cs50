@@ -182,16 +182,20 @@ void lock_pairs(void)
 void print_winner(void)
 {
     int winner_votes = 0;
+    int winners = 0;
 
     for (int i = 0; i <= candidate_count; i++)
     {
-        if (pairs[i].winner > winner_votes)
+        if (pairs[i].winner >= winner_votes)
         {
+            winners++;
+            winner_[i] = 
             int winner = pairs[i].winner;
         }
         else if (pairs[i].winner == winner_votes)
         {
-            
+            winners++;
+            winner_[i] =
         }
     }
     printf("%s \n", candidates[pairs[0].winner]);
