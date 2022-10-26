@@ -190,7 +190,7 @@ void print_winner(void)
         if (pairs[i].winner >= winner_votes)
         {
             winners++;
-            winner[i] = pairs[i].winner;
+            winner[i] = candidates[i];
             winner_votes = pairs[i].winner;
         }
     }
