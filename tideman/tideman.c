@@ -194,7 +194,7 @@ void print_winner(void)
     }
     for (int j = 0; j <= winners; j++)
     {
-        printf("%s \n", winner_[j]);
+        printf("%s\n", winner_[j]);
     }
     return;
 }
