@@ -194,8 +194,7 @@ void print_winner(void)
     }
     for (int j = 0; j <= winners; j++)
     {
-        printf("%s \n", candidates[pairs[0].winner]))
+        printf("%s \n", winner_[j]);
     }
-    printf("%s \n", candidates[pairs[0].winner]);
     return;
 }
