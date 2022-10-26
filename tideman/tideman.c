@@ -183,7 +183,7 @@ void print_winner(void)
 {
     int winner_votes = 0;
     int winners = 0;
-    string winner;
+    string winner[candidate_count];
 
     for (int i = 0; i <= candidate_count; i++)
     {
