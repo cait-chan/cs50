@@ -183,18 +183,20 @@ void print_winner(void)
 {
     int winner_votes = 0;
     int winners = 0;
+    string winner;
 
     for (int i = 0; i <= candidate_count; i++)
     {
         if (pairs[i].winner >= winner_votes)
         {
             winners++;
-            winner_[i] = pairs[i].winner;
+            winner[i] = pairs[i].winner;
+            winner_votes = pairs[i].winner;
         }
     }
     for (int j = 0; j <= winners; j++)
     {
-        printf("%s\n", winner_[j]);
+        printf("%s\n", winner[j]);
     }
     return;
 }
