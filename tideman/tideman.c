@@ -191,11 +191,10 @@ void print_winner(void)
             winners++;
             winner_[i] = pairs[i].winner;
         }
-        else if (pairs[i].winner == winner_votes)
-        {
-            winners++;
-            winner_[i] =
-        }
+    }
+    for (int j = 0; j <= winners; j++)
+    {
+        printf("%s \n", candidates[pairs[0].winner]))
     }
     printf("%s \n", candidates[pairs[0].winner]);
     return;
