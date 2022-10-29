@@ -134,7 +134,8 @@ void add_pairs(void)
     {
         for (int j = i + 1; j < candidate_count; j++)
         {
-            for (int k = 0; k <= pair_count; k++)
+            for (int k = 0; k <= candidate_count; k++)
+            //the maximum number of pairs that can exist is the number of candidates
             {
                 if (preferences[i][j] > 0)
                 {
