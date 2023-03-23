@@ -161,12 +161,15 @@ void sort_pairs(void)
     {
         for (int j = 0; j <= (pair_count - 2); j++)
         {
-            if ((pairs[i].winner - pairs[i].loser) > strength)
+            for (int k = 0; k <= (pair_count); k++)
             {
-                pairs[i] = pairs[i - 1];
+                if ((pairs[j].winner - pairs[j].loser) > strength)
+                {
+                    pairs[k] = pairs[j];
+                }
+                else ()
             }
         }
-    }
 
     int strength = 0;
 
