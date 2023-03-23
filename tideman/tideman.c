@@ -158,7 +158,7 @@ void sort_pairs(void)
     int i = 0;
     int j = 0;
     int k = 0;
-    int l = 0; 
+    int temp = 0;
     while (i < (pair_count - 1))
     {
         for (j = 0, k = 0; j <= (pair_count - 2); j++, k++)
@@ -170,8 +170,9 @@ void sort_pairs(void)
             }
             else if ((pairs[j].winner - pairs[j].loser) < (pairs[j+1].winner - pairs[j+1].loser))
             {
+                temp = pairs[j+1];
                 pairs[k] = pairs[j+1];
-                pairs[k+1] = pairs[j];
+                pairs[k+1] = temp;
             }
         }
         i++;
