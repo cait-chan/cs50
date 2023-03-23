@@ -173,7 +173,7 @@ void sort_pairs(void)
                     pairs[k] = pairs[j+1];
                     pairs[k+1] = pairs[j];
                 }
-                else
+                else if ((pairs[j].winner - pairs[j].loser) = (pairs[j+1].winner - pairs[j+1].loser))
                 {
                     pairs[k] = pairs[j];
                     pairs[k+1] = pairs[j+1];
