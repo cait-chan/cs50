@@ -155,7 +155,18 @@ void sort_pairs(void)
 {
     //should utilize recurssion
 
-    while ()
+    int i = 0;
+    int strength = 0;
+    while (i < (pair_count - 1));
+    {
+        for (int j = 0; j <= (pair_count - 2); j++)
+        {
+            if ((pairs[i].winner - pairs[i].loser) > strength)
+            {
+                pairs[i] = pairs[i - 1];
+            }
+        }
+    }
 
     int strength = 0;
 
