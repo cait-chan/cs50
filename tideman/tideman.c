@@ -158,7 +158,7 @@ void sort_pairs(void)
     int i = 0;
     int j = 0;
     int k = 0;
-    pair temp = ;
+    pair temp = {winner:0 , loser: 0};
     while (i < (pair_count - 1))
     {
         for (j = 0, k = 0; j <= (pair_count - 2); j++, k++)
