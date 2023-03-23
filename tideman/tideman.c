@@ -163,7 +163,6 @@ void sort_pairs(void)
             pairs[i] = pairs[i - 1];
         }
     }
-    return;
 }
 
 // Lock pairs into the candidate graph in order, without creating cycles
@@ -177,7 +176,6 @@ void lock_pairs(void)
         }
         locked[pairs[i].winner][pairs[i].loser] = true;
     }
-    return;
 }
 
 // Print the winner of the election
@@ -200,5 +198,4 @@ void print_winner(void)
     {
         printf("%s\n", winner[j]);
     }
-    return;
 }
