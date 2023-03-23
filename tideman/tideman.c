@@ -157,7 +157,7 @@ void sort_pairs(void)
 
     int i = 0;
     int strength = 0;
-    while (i < (pair_count - 1));
+    while (i < (pair_count - 1))
     {
         for (int j = 0; j <= (pair_count - 2); j++)
         {
