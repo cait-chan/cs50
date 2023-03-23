@@ -155,7 +155,7 @@ void sort_pairs(void)
 {
     //should utilize recurssion
 
-    
+    while ()
 
     int strength = 0;
 
