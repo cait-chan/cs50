@@ -156,9 +156,11 @@ void sort_pairs(void)
     //should utilize recurssion
 
     int i = 0;
+    int j = 0;
+    int k = 0;
     while (i < (pair_count - 1))
     {
-        for (int j = 0, int k = 0; j <= (pair_count - 2), k <= (pair_count); j++, k++)
+        for (j = 0, k = 0; j <= (pair_count - 2), k <= (pair_count); j++, k++)
         {
             if ((pairs[j].winner - pairs[j].loser) >= (pairs[j+1].winner - pairs[j+1].loser))
             {
