@@ -180,15 +180,7 @@ void sort_pairs(void)
                 }
             }
         }
-
-    int strength = 0;
-
-    for (int i = 0; i <= pair_count; i++)
-    {
-        if ((pairs[i].winner - pairs[i].loser) > strength)
-        {
-            pairs[i] = pairs[i - 1];
-        }
+        i++;
     }
 }
 
