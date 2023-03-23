@@ -156,28 +156,28 @@ void sort_pairs(void)
     //should utilize recurssion
 
     int i = 0;
-    int strength = 0;
+    int k = 0;
     while (i < (pair_count - 1))
     {
         for (int j = 0; j <= (pair_count - 2); j++)
         {
-            for (int k = 0; k <= (pair_count); k++)
+            if ((pairs[j].winner - pairs[j].loser) > (pairs[j+1].winner - pairs[j+1].loser))
             {
-                if ((pairs[j].winner - pairs[j].loser) > (pairs[j+1].winner - pairs[j+1].loser))
-                {
-                    pairs[k] = pairs[j];
-                    pairs[k+1] = pairs[j+1];
-                }
-                else if ((pairs[j].winner - pairs[j].loser) < (pairs[j+1].winner - pairs[j+1].loser))
-                {
-                    pairs[k] = pairs[j+1];
-                    pairs[k+1] = pairs[j];
-                }
-                else if ((pairs[j].winner - pairs[j].loser) = (pairs[j+1].winner - pairs[j+1].loser))
-                {
-                    pairs[k] = pairs[j];
-                    pairs[k+1] = pairs[j+1];
-                }
+                pairs[k] = pairs[j];
+                pairs[k+1] = pairs[j+1];
+                k++;
+            }
+            else if ((pairs[j].winner - pairs[j].loser) < (pairs[j+1].winner - pairs[j+1].loser))
+            {
+                pairs[k] = pairs[j+1];
+                pairs[k+1] = pairs[j];
+                k++;
+            }
+            else if ((pairs[j].winner - pairs[j].loser) = (pairs[j+1].winner - pairs[j+1].loser))
+            {
+                pairs[k] = pairs[j];
+                pairs[k+1] = pairs[j+1];
+                k++;
             }
         }
         i++;
