@@ -154,28 +154,25 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     //should utilize recurssion
+    //bubblesort
 
-    int i = 0;
-    int j = 0;
-    int k = 0;
     pair temp;
-    while (i < (pair_count - 1))
+    for (int i = 0; i < (pair_count - 1); i++)
     {
-        for (j = 0, k = 0; j <= (pair_count - 2); j++, k++)
+        for (int j = 0; j <= (pair_count - 2); j++)
         {
             if ((pairs[j].winner - pairs[j].loser) >= (pairs[j+1].winner - pairs[j+1].loser))
             {
-                pairs[k] = pairs[j];
-                pairs[k+1] = pairs[j+1];
+                pairs[j] = pairs[j];
+                pairs[j+1] = pairs[j+1];
             }
             else if ((pairs[j].winner - pairs[j].loser) < (pairs[j+1].winner - pairs[j+1].loser))
             {
-                temp = pairs[j+1];
-                pairs[k] = pairs[j+1];
-                pairs[k+1] = temp;
+                temp = pairs[j];
+                pairs[j] = pairs[j+1];
+                pairs[j+1] = temp;
             }
         }
-        i++;
     }
 }
 
