@@ -182,6 +182,13 @@ void lock_pairs(void)
         {
             locked[pairs[i].winner][pairs[i].loser] = false;
         }
+        else if (i == pair_count - 1)
+        {
+            if (pairs[i].loser == pairs[0].winner)
+            {
+                locked[pairs[i].winner][pairs[i].loser] = false;
+            }
+        }
         locked[pairs[i].winner][pairs[i].loser] = true;
     }
 }
