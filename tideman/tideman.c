@@ -180,7 +180,7 @@ void lock_pairs(void)
     {
         for (int j = i - 1; j >= 0; j--)
         {
-            if (pairs[i].loser != pairs[j].winner) || (pairs[i].loser != pairs[j].loser)
+            if (pairs[i].loser == pairs[j].winner)
             {
                 locked[pairs[i].winner][pairs[i].loser] = false;
             }
