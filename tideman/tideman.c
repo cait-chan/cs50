@@ -166,7 +166,7 @@ void sort_pairs(void)
                // pairs[j] = pairs[j];
                 //pairs[j+1] = pairs[j+1];
             //}
-            if ((pairs[j].winner - pairs[j].loser) < (pairs[j+1].winner - pairs[j+1].loser))
+            if ((pairs[j].winner - pairs[j].loser) > (pairs[j+1].winner - pairs[j+1].loser))
             {
                 temp = pairs[j];
                 pairs[j] = pairs[j+1];
