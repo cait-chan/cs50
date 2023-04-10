@@ -174,11 +174,14 @@ void sort_pairs(void)
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
+//NEED TO IMPLEMENT RECURSSION SOMEHOW, WILL RETURN LATER
+
     locked[pairs[0].winner][pairs[0].loser] = true;
 
     for (int i = 1; i < pair_count; i++)
     {
         locked[pairs[i].winner][pairs[i].loser] = true;
+        //need to have it so that if it is false ever it cannot be true, so we start off true and try to disprove it
 
         for (int j = i - 1; j >= 0; j--)
         {
@@ -199,11 +202,6 @@ void lock_pairs(void)
                 {
                     locked[pairs[i].winner][pairs[i].loser] = false;
                 }
-                //need to have it so that if it is false ever it cannot be true
-                //else
-                //{
-                    //locked[pairs[i].winner][pairs[i].loser] = true;
-                //}
             }
         }
     }
