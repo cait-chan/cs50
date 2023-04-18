@@ -3,7 +3,8 @@
 int main(void)
 {
     int n = 50;
-    printf("%p\n", &n);
+    int *p = &n;
+    printf("%p\n", p);
 }
 
 //this means that the number 50 will end up in the computers memory and will be labelled "n"
