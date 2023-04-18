@@ -15,5 +15,9 @@ int main(void)
     char *s = "HI!";
     printf("%p\n", s);
     printf("%p\n", &s[0]);
+    printf("%p\n", &s[1]);
+    printf("%p\n", &s[2]);
+    printf("%p\n", &s[3]);
 }
-//this will print out the address of the first character in the string
+//this will print out the addresses of the first character in the string twice,
+//then each of the rest of the chars which are continguous in memory
