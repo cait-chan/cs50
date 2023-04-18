@@ -15,3 +15,4 @@ int main(void)
     char *s = "HI!";
     printf("%p\n", s);
 }
+//this will print out the memory address, which 
