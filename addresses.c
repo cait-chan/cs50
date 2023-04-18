@@ -13,6 +13,6 @@
 int main(void)
 {
     char *s = "HI!";
-    printf("%p\n", s);
+    printf("%s\n", s);
 }
-//this will print out the memory address, which 
+//this will print out "HI!", because it sends it to the address at s and prints until the nul
