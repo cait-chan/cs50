@@ -13,6 +13,7 @@
 int main(void)
 {
     char *s = "HI!";
-    printf("%s\n", s);
+    printf("%p\n", s);
+    printf("%p\n", &s[0]);
 }
-//this will print out "HI!", because it sends it to the address at s and prints until the nul
+//this will print out the address of the first character in the string
