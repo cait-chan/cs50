@@ -4,7 +4,7 @@ int main(void)
 {
     int n = 50;
     int *p = &n;
-    printf("%p\n", p);
+    printf("%i\n", *p);
 }
 
 //this means that the number 50 will end up in the computers memory and will be labelled "n"
