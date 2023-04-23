@@ -10,5 +10,6 @@ int main(void)
     printf("x: ");
     scanf("%i", &x);
     //this is a built in function for c which "scans" the users keyboard for input
-    //we have to store it in x, but must use &
+    //we have to store it in x, but must use & to denote the location by reference
+    printf("x: %i\n", x);
 }
