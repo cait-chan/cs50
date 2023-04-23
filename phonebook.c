@@ -15,7 +15,7 @@ int main(void)
     string number = get_string("Number: ");
 
     fprintf(file, "%s,%s\n", name, number);
-    //fprintf prints to a file, rather than to the string
+    //fprintf prints to a file, rather than to the screen
     //hence, needing to start it with the file you want to print to: "file"
 
     fclose(file);
