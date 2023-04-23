@@ -13,3 +13,12 @@ int main(void)
     //we have to store it in x, but must use & to denote the location by reference
     printf("x: %i\n", x);
 }
+//this works pretty easily for integers, but how about strings?
+
+int main(void)
+{
+    char *s;
+    printf("s: ");
+    scanf("%s", s);
+    //we don't need an & in front of s here because s is already declared as an address by using char *
+}
