@@ -26,3 +26,4 @@ int main(void)
     printf("s: %s\n", s);
 }
 //this does not work because we only have memory allocated for the pointer, and nothing to store the string that we request
+//it is difficult to know in advance how much memory to allocate for the user input, which is why get_string exists for cs50
