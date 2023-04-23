@@ -25,3 +25,4 @@ int main(void)
         //strings are special in this way
     printf("s: %s\n", s);
 }
+//this does not work because we only have memory allocated for the pointer, and nothing to store the string that we request
