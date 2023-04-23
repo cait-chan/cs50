@@ -10,5 +10,5 @@ int main(void)
     x[1] = 73;
     x[2] = 33;
 
-    free x;
+    free(x);
 }
