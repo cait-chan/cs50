@@ -19,4 +19,4 @@ void swap(int a, int b)
     b = tmp;
 }
 //this does not correctly swap x and y because in c when you call a function and pass in two arguments (a and b),
-//you're passing in those argument by value only (ie. a copy)
+//you're passing in those argument by value only (ie. a copy, not the actual variable)
