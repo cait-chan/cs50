@@ -43,4 +43,6 @@ int main(int argc, char *argv[])
     {
         free(plates[i]);
     }
+
+    fclose(argv[1]);
 }
