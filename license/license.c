@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
         idx++;
     }
 
-    for (int i = 0; i < 8; i++)
+    for (int i = 0; i < argc - 1; i++)
     {
         printf("%s\n", plates[i]);
     }
