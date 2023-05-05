@@ -48,8 +48,8 @@ int main(int argc, char *argv[])
     while (fread(&buffer, sizeof(int16_t), 1, input))
     {
             //multiply sample by factor to change volume
-            buffer *= factor;
-            fwrite(&buffer, sizeof(int16_t), 1, output);
+            int16_t newsample = buffer * factor;
+            fwrite(&newsample, sizeof(int16_t), 1, output);
     }
 
     //free memory
