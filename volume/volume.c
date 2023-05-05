@@ -48,12 +48,13 @@ int main(int argc, char *argv[])
     // TODO: Read samples from input file and write updated data to output file
     while (fread(&buffer, 2, 1, input))
     {
-        if ()
-        fwrite(&buffer, 2, 1, output);
+            //multiply sample by factor to change volume
+            int16_t newsample = buffer * factor;
+            fwrite(&newsample, 2, 1, output);
     }
 
     //free memory
-    free(header);
+    //free(header);
 
     // Close files
     fclose(input);
