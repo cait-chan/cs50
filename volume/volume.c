@@ -34,7 +34,8 @@ int main(int argc, char *argv[])
     float factor = atof(argv[3]);
 
     // TODO: Copy header from input file to output file
-    char *
+    char *header = malloc(sizeof(HEADER_SIZE));
+    strcpy(header, )
     // TODO: Read samples from input file and write updated data to output file
 
     // Close files
