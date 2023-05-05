@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 // Number of bytes in .wav header
 const int HEADER_SIZE = 44;
@@ -46,7 +47,7 @@ int main(int argc, char *argv[])
     int16_t buffer;
 
     // TODO: Read samples from input file and write updated data to output file
-    while (fread(&buffer, sizeof(int16_t), 1, input) == (strlen(input - 44)/2))
+    while (fread(&buffer, sizeof(int16_t), 1, input) == (strlen(argv[2] - 44)/2))
     {
             //multiply sample by factor to change volume
             int16_t newsample = buffer * factor;
