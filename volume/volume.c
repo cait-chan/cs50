@@ -43,6 +43,14 @@ int main(int argc, char *argv[])
     }
 
     // TODO: Read samples from input file and write updated data to output file
+    while (fread(header, sizeof(HEADER_SIZE), 1, input))
+    {
+        if ()
+        fwrite(header, sizeof(HEADER_SIZE), 1, output);
+    }
+
+    //free memory
+    free(header);
 
     // Close files
     fclose(input);
