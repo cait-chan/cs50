@@ -33,8 +33,15 @@ int main(int argc, char *argv[])
 
     float factor = atof(argv[3]);
 
-    // TODO: Copy header from input file to output file
+    //create header to read into
     char *header = malloc(sizeof(HEADER_SIZE));
+
+    // TODO: Copy header from input file to output file
+    while (fread(header, sizeof(HEADER_SIZE), 1, input))
+    {
+        
+    }
+
 
     for (int i = 0, i < 44, i++)
     {
