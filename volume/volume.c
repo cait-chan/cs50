@@ -37,9 +37,9 @@ int main(int argc, char *argv[])
     uint8_t header[44];
 
     // TODO: Copy header from input file to output file
-    while (fread(header, sizeof(HEADER_SIZE), 1, input))
+    while (fread(header, HEADER_SIZE, 1, input))
     {
-        fwrite(header, sizeof(HEADER_SIZE), 1, output);
+        fwrite(header, HEADER_SIZE, 1, output);
     }
 
     //create buffer to store audio samples
