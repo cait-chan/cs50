@@ -242,8 +242,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 Gx[i][j].rgbtBlue = round((image[i - 1][j - 1].rgbtBlue + image[i - 1][j].rgbtBlue + image[i][j - 1].rgbtBlue + image[i][j].rgbtBlue + image[i + 1][j - 1].rgbtBlue + image[i + 1][j].rgbtBlue) / 6.0);
             }
             else
-            {8 
-                Gx[i][j].rgbtRed = round((-1 * image[i - 1][j - 1].rgbtRed) + (0 * image[i - 1][j].rgbtRed) + (1image[i - 1][j + 1].rgbtRed + image[i][j - 1].rgbtRed + image[i][j].rgbtRed + image[i][j + 1].rgbtRed + image[i + 1][j - 1].rgbtRed + image[i + 1][j].rgbtRed + image[i + 1][j + 1].rgbtRed) / 9.0);
+            {
+                Gx[i][j].rgbtRed = round((-1 * image[i - 1][j - 1].rgbtRed) + (0 * image[i - 1][j].rgbtRed) + (1 * image[i - 1][j + 1].rgbtRed) + (-2 * image[i][j - 1].rgbtRed) + image[i][j].rgbtRed + image[i][j + 1].rgbtRed + image[i + 1][j - 1].rgbtRed + image[i + 1][j].rgbtRed + image[i + 1][j + 1].rgbtRed) / 9.0);
                 Gx[i][j].rgbtGreen = round((image[i - 1][j - 1].rgbtGreen + image[i - 1][j].rgbtGreen + image[i - 1][j + 1].rgbtGreen + image[i][j - 1].rgbtGreen + image[i][j].rgbtGreen + image[i][j + 1].rgbtGreen + image[i + 1][j - 1].rgbtGreen + image[i + 1][j].rgbtGreen + image[i + 1][j + 1].rgbtGreen) / 9.0);
                 Gx[i][j].rgbtBlue = round((image[i - 1][j - 1].rgbtBlue + image[i - 1][j].rgbtBlue + image[i - 1][j + 1].rgbtBlue + image[i][j - 1].rgbtBlue + image[i][j].rgbtBlue + image[i][j + 1].rgbtBlue + image[i + 1][j - 1].rgbtBlue + image[i + 1][j].rgbtBlue + image[i + 1][j + 1].rgbtBlue) / 9.0);
             }
@@ -255,9 +255,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int l = 0; l < width; l++)
         {
-            image[k][l].rgbtRed = blur[k][l].rgbtRed;
-            image[k][l].rgbtGreen = blur[k][l].rgbtGreen;
-            image[k][l].rgbtBlue = blur[k][l].rgbtBlue;
+            image[k][l].rgbtRed = sqrt(pow(Gx[i][j].rgbtRed, 2) + pow(Gy[i][j].rgbtRed, 2));
+            image[k][l].rgbtGreen =
+            image[k][l].rgbtBlue =
         }
     }
 
