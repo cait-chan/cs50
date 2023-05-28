@@ -89,7 +89,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         }
         else if (width % 2 != 0) //odd
         {
-            for (int j = 0; j < ((width - 1)/2); j++)
+            for (int j = 0; j < ((width - 1) / 2); j++)
             {
                 tmp = image[i][j];
                 image[i][j] = image[i][width - j - 1];
@@ -121,7 +121,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 blur[i][j].rgbtRed = round((image[i][j].rgbtRed + image[i][j - 1].rgbtRed + image[i + 1][j].rgbtRed + image[i + 1][j - 1].rgbtRed) / 4.0);
                 blur[i][j].rgbtGreen = round((image[i][j].rgbtGreen + image[i][j - 1].rgbtGreen + image[i + 1][j].rgbtGreen + image[i + 1][j -1 ].rgbtGreen) / 4.0);
-                blur[i][j].rgbtBlue = round((image[i][j].rgbtBlue + image[i][j - 1].rgbtBlue + image[i + 1][j].rgbtBlue + image[i + 1][j - ].rgbtBlue) / 4.0);
+                blur[i][j].rgbtBlue = round((image[i][j].rgbtBlue + image[i][j - 1].rgbtBlue + image[i + 1][j].rgbtBlue + image[i + 1][j - 1].rgbtBlue) / 4.0);
             }
             else if ((i == (height - 1)) && (j == 0)) //bottom left corner
             {
