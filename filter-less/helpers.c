@@ -84,7 +84,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             {
                 tmp = image[i][j];
                 image[i][j] = image[i][width - j];
-                image[i][width - j] = tmp;
+                image[i][width - j - 1] = tmp;
             }
         }
         else if (width % 2 != 0) //odd
@@ -93,7 +93,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             {
                 tmp = image[i][j];
                 image[i][j] = image[i][width - j];
-                image[i][width - j] = tmp;
+                image[i][width - j - 1] = tmp;
             }
         }
     }
