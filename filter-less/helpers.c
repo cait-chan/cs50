@@ -89,7 +89,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         }
         else if (width % 2 != 0) //odd
         {
-            for (int j = 0; j < (width/2 - 1); j++)
+            for (int j = 0; j < (width/2); j++)
             {
                 tmp = image[i][j];
                 image[i][j] = image[i][width - j];
