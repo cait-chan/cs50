@@ -291,7 +291,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int l = 0; l < width; l++)
         {
-            image[k][l].rgbtRed = sqrt(pow(Gx[k][l].rgbtRed, 2) + pow(Gy[k][l].rgbtRed, 2));
+            image[k][l].rgbtRed = round(sqrt(pow(Gx[k][l].rgbtRed, 2.0) + pow(Gy[k][l].rgbtRed, 2.0)));
             if (image[k][l].rgbtRed < 0)
             {
                 image[k][l].rgbtRed = 0;
@@ -301,7 +301,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 image[k][l].rgbtRed = 255;
             }
 
-            image[k][l].rgbtGreen = sqrt(pow(Gx[k][l].rgbtGreen, 2) + pow(Gy[k][l].rgbtGreen, 2));
+            image[k][l].rgbtGreen = round(sqrt(pow(Gx[k][l].rgbtGreen, 2.0) + pow(Gy[k][l].rgbtGreen, 2.0)));
             if (image[k][l].rgbtGreen < 0)
             {
                 image[k][l].rgbtGreen = 0;
@@ -311,7 +311,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 image[k][l].rgbtGreen = 255;
             }
 
-            image[k][l].rgbtBlue = sqrt(pow(Gx[k][l].rgbtBlue, 2) + pow(Gy[k][l].rgbtBlue, 2));
+            image[k][l].rgbtBlue = round(sqrt(pow(Gx[k][l].rgbtBlue, 2.0) + pow(Gy[k][l].rgbtBlue, 2.0)));
             if (image[k][l].rgbtBlue < 0)
             {
                 image[k][l].rgbtBlue = 0;
