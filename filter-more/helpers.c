@@ -195,27 +195,27 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             //need to make exceptions for first and last row and columns
             if ((i == 0) && (j == 0)) //top left corner
             {
-                Gx[i][j].rgbtRed = round((0 * image[i][j].rgbtRed) + (2.0 * image[i][j + 1].rgbtRed) + (0 * image[i + 1][j].rgbtRed) + (1.0 * image[i + 1][j + 1].rgbtRed));
-                Gx[i][j].rgbtGreen = round((0 * image[i][j].rgbtGreen) + (2.0 * image[i][j + 1].rgbtGreen) + (0 * image[i + 1][j].rgbtGreen) + (1.0 * image[i + 1][j + 1].rgbtGreen));
-                Gx[i][j].rgbtBlue = round((0 * image[i][j].rgbtBlue) + (2.0 * image[i][j + 1].rgbtBlue) + (0 * image[i + 1][j].rgbtBlue) + (1.0 * image[i + 1][j + 1].rgbtBlue));
+                Gx[i][j].rgbtRed = ((0 * image[i][j].rgbtRed) + (2.0 * image[i][j + 1].rgbtRed) + (0 * image[i + 1][j].rgbtRed) + (1.0 * image[i + 1][j + 1].rgbtRed));
+                Gx[i][j].rgbtGreen = ((0 * image[i][j].rgbtGreen) + (2.0 * image[i][j + 1].rgbtGreen) + (0 * image[i + 1][j].rgbtGreen) + (1.0 * image[i + 1][j + 1].rgbtGreen));
+                Gx[i][j].rgbtBlue = ((0 * image[i][j].rgbtBlue) + (2.0 * image[i][j + 1].rgbtBlue) + (0 * image[i + 1][j].rgbtBlue) + (1.0 * image[i + 1][j + 1].rgbtBlue));
 
-                Gy[i][j].rgbtRed = round((0 * image[i][j].rgbtRed) + (0 * image[i][j + 1].rgbtRed) + (2.0 * image[i + 1][j].rgbtRed) + (1.0 * image[i + 1][j + 1].rgbtRed));
-                Gy[i][j].rgbtGreen = round((0 * image[i][j].rgbtGreen) + (0 * image[i][j + 1].rgbtGreen) + (2.0 * image[i + 1][j].rgbtGreen) + (1.0 * image[i + 1][j + 1].rgbtGreen));
-                Gy[i][j].rgbtBlue = round((0 * image[i][j].rgbtBlue) + (0 * image[i][j + 1].rgbtBlue) + (2.0 * image[i + 1][j].rgbtBlue) + (1.0 * image[i + 1][j + 1].rgbtBlue));
+                Gy[i][j].rgbtRed = ((0 * image[i][j].rgbtRed) + (0 * image[i][j + 1].rgbtRed) + (2.0 * image[i + 1][j].rgbtRed) + (1.0 * image[i + 1][j + 1].rgbtRed));
+                Gy[i][j].rgbtGreen = ((0 * image[i][j].rgbtGreen) + (0 * image[i][j + 1].rgbtGreen) + (2.0 * image[i + 1][j].rgbtGreen) + (1.0 * image[i + 1][j + 1].rgbtGreen));
+                Gy[i][j].rgbtBlue = ((0 * image[i][j].rgbtBlue) + (0 * image[i][j + 1].rgbtBlue) + (2.0 * image[i + 1][j].rgbtBlue) + (1.0 * image[i + 1][j + 1].rgbtBlue));
             }
             else if ((i == 0) && (j == (width - 1))) //top right corner
             {
-                Gx[i][j].rgbtRed = round((-2.0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (-1.0 * image[i + 1][j - 1].rgbtRed) + (0 * image[i + 1][j].rgbtRed));
-                Gx[i][j].rgbtGreen = round((-2.0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (-1.0 * image[i + 1][j - 1].rgbtGreen) + (0 * image[i + 1][j].rgbtGreen));
-                Gx[i][j].rgbtBlue = round((-2.0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (-1.0 * image[i + 1][j - 1].rgbtBlue) + (0 * image[i + 1][j].rgbtBlue));
+                Gx[i][j].rgbtRed = ((-2.0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (-1.0 * image[i + 1][j - 1].rgbtRed) + (0 * image[i + 1][j].rgbtRed));
+                Gx[i][j].rgbtGreen = ((-2.0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (-1.0 * image[i + 1][j - 1].rgbtGreen) + (0 * image[i + 1][j].rgbtGreen));
+                Gx[i][j].rgbtBlue = ((-2.0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (-1.0 * image[i + 1][j - 1].rgbtBlue) + (0 * image[i + 1][j].rgbtBlue));
 
-                Gy[i][j].rgbtRed = round((0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (1.0 * image[i + 1][j - 1].rgbtRed) + (2.0 * image[i + 1][j].rgbtRed));
-                Gy[i][j].rgbtGreen = round((0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (1.0 * image[i + 1][j - 1].rgbtGreen) + (2.0 * image[i + 1][j].rgbtGreen));
-                Gy[i][j].rgbtBlue = round((0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (1.0 * image[i + 1][j - 1].rgbtBlue) + (2.0 * image[i + 1][j].rgbtBlue));
+                Gy[i][j].rgbtRed = ((0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (1.0 * image[i + 1][j - 1].rgbtRed) + (2.0 * image[i + 1][j].rgbtRed));
+                Gy[i][j].rgbtGreen = ((0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (1.0 * image[i + 1][j - 1].rgbtGreen) + (2.0 * image[i + 1][j].rgbtGreen));
+                Gy[i][j].rgbtBlue = ((0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (1.0 * image[i + 1][j - 1].rgbtBlue) + (2.0 * image[i + 1][j].rgbtBlue));
             }
             else if ((i == (height - 1)) && (j == 0)) //bottom left corner
             {
-                Gx[i][j].rgbtRed = round((0 * image[i - 1][j].rgbtRed) + (1.0 * image[i - 1][j + 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (2.0 * image[i][j + 1].rgbtRed));
+                Gx[i][j].rgbtRed = ((0 * image[i - 1][j].rgbtRed) + (1.0 * image[i - 1][j + 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (2.0 * image[i][j + 1].rgbtRed));
                 Gx[i][j].rgbtGreen = ((0 * image[i - 1][j].rgbtGreen) + (1.0 * image[i - 1][j + 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (2.0 * image[i][j + 1].rgbtGreen));
                 Gx[i][j].rgbtBlue = ((0 * image[i - 1][j].rgbtBlue) + (1.0 * image[i - 1][j + 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (2.0 * image[i][j + 1].rgbtBlue));
 
