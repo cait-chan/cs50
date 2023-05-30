@@ -287,38 +287,54 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     }
 
     //loop to replace the old colours with the new colours
+    int Red = 0;
+    int Green = 0;
+    int Blue = 0;
+
     for (int k = 0; k < height; k++)
     {
         for (int l = 0; l < width; l++)
         {
-            image[k][l].rgbtRed = round(sqrt((Gx[k][l].rgbtRed * Gx[k][l].rgbtRed) + (Gy[k][l].rgbtRed * Gy[k][l].rgbtRed)));
-            if (image[k][l].rgbtRed < 0)
+            Red = round(sqrt((Gx[k][l].rgbtRed * Gx[k][l].rgbtRed) + (Gy[k][l].rgbtRed * Gy[k][l].rgbtRed)));
+            if (Red < 0)
             {
                 image[k][l].rgbtRed = 0;
             }
-            else if (image[k][l].rgbtRed > 255)
+            else if (Red > 255)
             {
                 image[k][l].rgbtRed = 255;
             }
+            else
+            {
+                image[k][l].rgbtRed = Red;
+            }
 
-            image[k][l].rgbtGreen = round(sqrt((Gx[k][l].rgbtGreen * Gx[k][l].rgbtGreen) + (Gy[k][l].rgbtGreen * Gy[k][l].rgbtGreen)));
-            if (image[k][l].rgbtGreen < 0)
+            Green = round(sqrt((Gx[k][l].rgbtGreen * Gx[k][l].rgbtGreen) + (Gy[k][l].rgbtGreen * Gy[k][l].rgbtGreen)));
+            if (Green < 0)
             {
                 image[k][l].rgbtGreen = 0;
             }
-            else if (image[k][l].rgbtGreen > 255)
+            else if (Green > 255)
             {
                 image[k][l].rgbtGreen = 255;
             }
+            else
+            {
+                image[k][l].rgbtGreen = Green;
+            }
 
-            image[k][l].rgbtBlue = round(sqrt((Gx[k][l].rgbtBlue * Gx[k][l].rgbtBlue) + (Gy[k][l].rgbtBlue * Gy[k][l].rgbtBlue)));
-            if (image[k][l].rgbtBlue < 0)
+            Blue = round(sqrt((Gx[k][l].rgbtBlue * Gx[k][l].rgbtBlue) + (Gy[k][l].rgbtBlue * Gy[k][l].rgbtBlue)));
+            if (Blue < 0)
             {
                 image[k][l].rgbtBlue = 0;
             }
-            else if (image[k][l].rgbtBlue > 255)
+            else if (Blue > 255)
             {
                 image[k][l].rgbtBlue = 255;
+            }
+            else
+            {
+                image[k][l].rgbtBlue = Blue;
             }
         }
     }
