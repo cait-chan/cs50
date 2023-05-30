@@ -216,72 +216,72 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             else if ((i == (height - 1)) && (j == 0)) //bottom left corner
             {
                 Gx[i][j].rgbtRed = round((0 * image[i - 1][j].rgbtRed) + (1.0 * image[i - 1][j + 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (2.0 * image[i][j + 1].rgbtRed));
-                Gx[i][j].rgbtGreen = round((0 * image[i - 1][j].rgbtGreen) + (1.0 * image[i - 1][j + 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (2.0 * image[i][j + 1].rgbtGreen));
-                Gx[i][j].rgbtBlue = round((0 * image[i - 1][j].rgbtBlue) + (1.0 * image[i - 1][j + 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (2.0 * image[i][j + 1].rgbtBlue));
+                Gx[i][j].rgbtGreen = ((0 * image[i - 1][j].rgbtGreen) + (1.0 * image[i - 1][j + 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (2.0 * image[i][j + 1].rgbtGreen));
+                Gx[i][j].rgbtBlue = ((0 * image[i - 1][j].rgbtBlue) + (1.0 * image[i - 1][j + 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (2.0 * image[i][j + 1].rgbtBlue));
 
-                Gy[i][j].rgbtRed = round((-2.0 * image[i - 1][j].rgbtRed) + (-1.0 * image[i - 1][j + 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (0 * image[i][j + 1].rgbtRed));
-                Gy[i][j].rgbtGreen = round((-2.0 * image[i - 1][j].rgbtGreen) + (-1.0 * image[i - 1][j + 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (0 * image[i][j + 1].rgbtGreen));
-                Gy[i][j].rgbtBlue = round((-2.0 * image[i - 1][j].rgbtBlue) + (-1.0 * image[i - 1][j + 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (0 * image[i][j + 1].rgbtBlue));
+                Gy[i][j].rgbtRed = ((-2.0 * image[i - 1][j].rgbtRed) + (-1.0 * image[i - 1][j + 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (0 * image[i][j + 1].rgbtRed));
+                Gy[i][j].rgbtGreen = ((-2.0 * image[i - 1][j].rgbtGreen) + (-1.0 * image[i - 1][j + 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (0 * image[i][j + 1].rgbtGreen));
+                Gy[i][j].rgbtBlue = ((-2.0 * image[i - 1][j].rgbtBlue) + (-1.0 * image[i - 1][j + 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (0 * image[i][j + 1].rgbtBlue));
             }
             else if ((i == (height - 1)) && (j == (width - 1))) //bottom right corner
             {
-                Gx[i][j].rgbtRed = round((-1.0 * image[i - 1][j - 1].rgbtRed) + (0 * image[i - 1][j].rgbtRed) + (-2.0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed));
-                Gx[i][j].rgbtGreen = round((-1.0 * image[i - 1][j - 1].rgbtGreen) + (0 * image[i - 1][j].rgbtGreen) + (-2.0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen));
-                Gx[i][j].rgbtBlue = round((-1.0 * image[i - 1][j - 1].rgbtBlue) + (0 * image[i - 1][j].rgbtBlue) + (-2.0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue));
+                Gx[i][j].rgbtRed = ((-1.0 * image[i - 1][j - 1].rgbtRed) + (0 * image[i - 1][j].rgbtRed) + (-2.0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed));
+                Gx[i][j].rgbtGreen = ((-1.0 * image[i - 1][j - 1].rgbtGreen) + (0 * image[i - 1][j].rgbtGreen) + (-2.0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen));
+                Gx[i][j].rgbtBlue = ((-1.0 * image[i - 1][j - 1].rgbtBlue) + (0 * image[i - 1][j].rgbtBlue) + (-2.0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue));
 
-                Gy[i][j].rgbtRed = round((-1.0 * image[i - 1][j - 1].rgbtRed) + (-2.0 * image[i - 1][j].rgbtRed) + (0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed));
-                Gy[i][j].rgbtGreen = round((-1.0 * image[i - 1][j - 1].rgbtGreen) + (-2.0 * image[i - 1][j].rgbtGreen) + (0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen));
-                Gy[i][j].rgbtBlue = round((-1.0 * image[i - 1][j - 1].rgbtBlue) + (-2.0 * image[i - 1][j].rgbtBlue) + (0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue));
+                Gy[i][j].rgbtRed = ((-1.0 * image[i - 1][j - 1].rgbtRed) + (-2.0 * image[i - 1][j].rgbtRed) + (0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed));
+                Gy[i][j].rgbtGreen = ((-1.0 * image[i - 1][j - 1].rgbtGreen) + (-2.0 * image[i - 1][j].rgbtGreen) + (0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen));
+                Gy[i][j].rgbtBlue = ((-1.0 * image[i - 1][j - 1].rgbtBlue) + (-2.0 * image[i - 1][j].rgbtBlue) + (0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue));
             }
             else if ((i == 0) && (0 < j < (width - 1))) //only first row middle
             {
-                Gx[i][j].rgbtRed = round((-2.0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (2.0 * image[i][j + 1].rgbtRed) + (-1.0 * image[i + 1][j - 1].rgbtRed) + (0 * image[i + 1][j].rgbtRed) + (1.0 * image[i + 1][j + 1].rgbtRed));
-                Gx[i][j].rgbtGreen = round((-2.0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (2.0 * image[i][j + 1].rgbtGreen) + (-1.0 * image[i + 1][j - 1].rgbtGreen) + (0 * image[i + 1][j].rgbtGreen) + (1.0 * image[i + 1][j + 1].rgbtGreen));
-                Gx[i][j].rgbtBlue = round((-2.0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (2.0 * image[i][j + 1].rgbtBlue) + (-1.0 * image[i + 1][j - 1].rgbtBlue) + (0 * image[i + 1][j].rgbtBlue) + (1.0 * image[i + 1][j + 1].rgbtBlue));
+                Gx[i][j].rgbtRed = ((-2.0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (2.0 * image[i][j + 1].rgbtRed) + (-1.0 * image[i + 1][j - 1].rgbtRed) + (0 * image[i + 1][j].rgbtRed) + (1.0 * image[i + 1][j + 1].rgbtRed));
+                Gx[i][j].rgbtGreen = ((-2.0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (2.0 * image[i][j + 1].rgbtGreen) + (-1.0 * image[i + 1][j - 1].rgbtGreen) + (0 * image[i + 1][j].rgbtGreen) + (1.0 * image[i + 1][j + 1].rgbtGreen));
+                Gx[i][j].rgbtBlue = ((-2.0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (2.0 * image[i][j + 1].rgbtBlue) + (-1.0 * image[i + 1][j - 1].rgbtBlue) + (0 * image[i + 1][j].rgbtBlue) + (1.0 * image[i + 1][j + 1].rgbtBlue));
 
-                Gy[i][j].rgbtRed = round((0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (0 * image[i][j + 1].rgbtRed) + (1.0 * image[i + 1][j - 1].rgbtRed) + (2.0 * image[i + 1][j].rgbtRed) + (1.0 * image[i + 1][j + 1].rgbtRed));
-                Gy[i][j].rgbtGreen = round((0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (0 * image[i][j + 1].rgbtGreen) + (1.0 * image[i + 1][j - 1].rgbtGreen) + (2.0 * image[i + 1][j].rgbtGreen) + (1.0 * image[i + 1][j + 1].rgbtGreen));
-                Gy[i][j].rgbtBlue = round((0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (0 * image[i][j + 1].rgbtBlue) + (1.0 * image[i + 1][j - 1].rgbtBlue) + (2.0 * image[i + 1][j].rgbtBlue) + (1.0 * image[i + 1][j + 1].rgbtBlue));
+                Gy[i][j].rgbtRed = ((0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (0 * image[i][j + 1].rgbtRed) + (1.0 * image[i + 1][j - 1].rgbtRed) + (2.0 * image[i + 1][j].rgbtRed) + (1.0 * image[i + 1][j + 1].rgbtRed));
+                Gy[i][j].rgbtGreen = ((0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (0 * image[i][j + 1].rgbtGreen) + (1.0 * image[i + 1][j - 1].rgbtGreen) + (2.0 * image[i + 1][j].rgbtGreen) + (1.0 * image[i + 1][j + 1].rgbtGreen));
+                Gy[i][j].rgbtBlue = ((0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (0 * image[i][j + 1].rgbtBlue) + (1.0 * image[i + 1][j - 1].rgbtBlue) + (2.0 * image[i + 1][j].rgbtBlue) + (1.0 * image[i + 1][j + 1].rgbtBlue));
             }
             else if ((i == (height - 1)) && (0 < j < (width - 1)))//only last row middle
             {
-                Gx[i][j].rgbtRed = round((-1.0 * image[i - 1][j - 1].rgbtRed) + (0 * image[i - 1][j].rgbtRed) + (1.0 * image[i - 1][j + 1].rgbtRed) + (-2.0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (2.0 * image[i][j + 1].rgbtRed));
-                Gx[i][j].rgbtGreen = round((-1.0 * image[i - 1][j - 1].rgbtGreen) + (0 * image[i - 1][j].rgbtGreen) + (1.0 * image[i - 1][j + 1].rgbtGreen) + (-2.0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (2.0 * image[i][j + 1].rgbtGreen));
-                Gx[i][j].rgbtBlue = round((-1.0 * image[i - 1][j - 1].rgbtBlue) + (0 * image[i - 1][j].rgbtBlue) + (1.0 * image[i - 1][j + 1].rgbtBlue) + (-2.0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (2.0 * image[i][j + 1].rgbtBlue));
+                Gx[i][j].rgbtRed = ((-1.0 * image[i - 1][j - 1].rgbtRed) + (0 * image[i - 1][j].rgbtRed) + (1.0 * image[i - 1][j + 1].rgbtRed) + (-2.0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (2.0 * image[i][j + 1].rgbtRed));
+                Gx[i][j].rgbtGreen = ((-1.0 * image[i - 1][j - 1].rgbtGreen) + (0 * image[i - 1][j].rgbtGreen) + (1.0 * image[i - 1][j + 1].rgbtGreen) + (-2.0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (2.0 * image[i][j + 1].rgbtGreen));
+                Gx[i][j].rgbtBlue = ((-1.0 * image[i - 1][j - 1].rgbtBlue) + (0 * image[i - 1][j].rgbtBlue) + (1.0 * image[i - 1][j + 1].rgbtBlue) + (-2.0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (2.0 * image[i][j + 1].rgbtBlue));
 
-                Gy[i][j].rgbtRed = round((-1.0 * image[i - 1][j - 1].rgbtRed) + (-2.0 * image[i - 1][j].rgbtRed) + (-1.0 * image[i - 1][j + 1].rgbtRed) + (0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (0 * image[i][j + 1].rgbtRed));
-                Gy[i][j].rgbtGreen = round((-1.0 * image[i - 1][j - 1].rgbtGreen) + (-2.0 * image[i - 1][j].rgbtGreen) + (-1.0 * image[i - 1][j + 1].rgbtGreen) + (0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (0 * image[i][j + 1].rgbtGreen));
-                Gy[i][j].rgbtBlue = round((-1.0 * image[i - 1][j - 1].rgbtBlue) + (-2.0 * image[i - 1][j].rgbtBlue) + (-1.0 * image[i - 1][j + 1].rgbtBlue) + (0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (0 * image[i][j + 1].rgbtBlue));
+                Gy[i][j].rgbtRed = ((-1.0 * image[i - 1][j - 1].rgbtRed) + (-2.0 * image[i - 1][j].rgbtRed) + (-1.0 * image[i - 1][j + 1].rgbtRed) + (0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (0 * image[i][j + 1].rgbtRed));
+                Gy[i][j].rgbtGreen = ((-1.0 * image[i - 1][j - 1].rgbtGreen) + (-2.0 * image[i - 1][j].rgbtGreen) + (-1.0 * image[i - 1][j + 1].rgbtGreen) + (0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (0 * image[i][j + 1].rgbtGreen));
+                Gy[i][j].rgbtBlue = ((-1.0 * image[i - 1][j - 1].rgbtBlue) + (-2.0 * image[i - 1][j].rgbtBlue) + (-1.0 * image[i - 1][j + 1].rgbtBlue) + (0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (0 * image[i][j + 1].rgbtBlue));
             }
             else if ((0 < i < (height - 1)) && (j == 0)) //only first column middle
             {
-                Gx[i][j].rgbtRed = round((0 * image[i - 1][j].rgbtRed) + (1.0 * image[i - 1][j + 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (2.0 * image[i][j + 1].rgbtRed) + (0 * image[i + 1][j].rgbtRed) + (1.0 * image[i + 1][j + 1].rgbtRed));
-                Gx[i][j].rgbtGreen = round((0 * image[i - 1][j].rgbtGreen) + (1.0 * image[i - 1][j + 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (2.0 * image[i][j + 1].rgbtGreen) + (0 * image[i + 1][j].rgbtGreen) + (1.0 * image[i + 1][j + 1].rgbtGreen));
-                Gx[i][j].rgbtBlue = round((0 * image[i - 1][j].rgbtBlue) + (1.0 * image[i - 1][j + 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (2.0 * image[i][j + 1].rgbtBlue) + (0 * image[i + 1][j].rgbtBlue) + (1.0 * image[i + 1][j + 1].rgbtBlue));
+                Gx[i][j].rgbtRed = ((0 * image[i - 1][j].rgbtRed) + (1.0 * image[i - 1][j + 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (2.0 * image[i][j + 1].rgbtRed) + (0 * image[i + 1][j].rgbtRed) + (1.0 * image[i + 1][j + 1].rgbtRed));
+                Gx[i][j].rgbtGreen = ((0 * image[i - 1][j].rgbtGreen) + (1.0 * image[i - 1][j + 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (2.0 * image[i][j + 1].rgbtGreen) + (0 * image[i + 1][j].rgbtGreen) + (1.0 * image[i + 1][j + 1].rgbtGreen));
+                Gx[i][j].rgbtBlue = ((0 * image[i - 1][j].rgbtBlue) + (1.0 * image[i - 1][j + 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (2.0 * image[i][j + 1].rgbtBlue) + (0 * image[i + 1][j].rgbtBlue) + (1.0 * image[i + 1][j + 1].rgbtBlue));
 
-                Gy[i][j].rgbtRed = round((-2.0 * image[i - 1][j].rgbtRed) + (-1.0 * image[i - 1][j + 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (0 * image[i][j + 1].rgbtRed) + (2.0 * image[i + 1][j].rgbtRed) + (1.0 * image[i + 1][j + 1].rgbtRed));
-                Gy[i][j].rgbtGreen = round((-2.0 * image[i - 1][j].rgbtGreen) + (-1.0 * image[i - 1][j + 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (0 * image[i][j + 1].rgbtGreen) + (2.0 * image[i + 1][j].rgbtGreen) + (1.0 * image[i + 1][j + 1].rgbtGreen));
-                Gy[i][j].rgbtBlue = round((-2.0 * image[i - 1][j].rgbtBlue) + (-1.0 * image[i - 1][j + 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (0 * image[i][j + 1].rgbtBlue) + (2.0 * image[i + 1][j].rgbtBlue) + (1.0 * image[i + 1][j + 1].rgbtBlue));
+                Gy[i][j].rgbtRed = ((-2.0 * image[i - 1][j].rgbtRed) + (-1.0 * image[i - 1][j + 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (0 * image[i][j + 1].rgbtRed) + (2.0 * image[i + 1][j].rgbtRed) + (1.0 * image[i + 1][j + 1].rgbtRed));
+                Gy[i][j].rgbtGreen = ((-2.0 * image[i - 1][j].rgbtGreen) + (-1.0 * image[i - 1][j + 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (0 * image[i][j + 1].rgbtGreen) + (2.0 * image[i + 1][j].rgbtGreen) + (1.0 * image[i + 1][j + 1].rgbtGreen));
+                Gy[i][j].rgbtBlue = ((-2.0 * image[i - 1][j].rgbtBlue) + (-1.0 * image[i - 1][j + 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (0 * image[i][j + 1].rgbtBlue) + (2.0 * image[i + 1][j].rgbtBlue) + (1.0 * image[i + 1][j + 1].rgbtBlue));
             }
             else if ((0 < i < (height - 1)) && (j == (width - 1))) //only last column middle
             {
-                Gx[i][j].rgbtRed = round((-1.0 * image[i - 1][j - 1].rgbtRed) + (0 * image[i - 1][j].rgbtRed) + (-2.0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (-1.0 * image[i + 1][j - 1].rgbtRed) + (0 * image[i + 1][j].rgbtRed));
-                Gx[i][j].rgbtGreen = round((-1.0 * image[i - 1][j - 1].rgbtGreen) + (0 * image[i - 1][j].rgbtGreen) + (-2.0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (-1.0 * image[i + 1][j - 1].rgbtGreen) + (0 * image[i + 1][j].rgbtGreen));
-                Gx[i][j].rgbtBlue = round((-1.0 * image[i - 1][j - 1].rgbtBlue) + (0 * image[i - 1][j].rgbtBlue) + (-2.0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (-1.0 * image[i + 1][j - 1].rgbtBlue) + (0 * image[i + 1][j].rgbtBlue));
+                Gx[i][j].rgbtRed = ((-1.0 * image[i - 1][j - 1].rgbtRed) + (0 * image[i - 1][j].rgbtRed) + (-2.0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (-1.0 * image[i + 1][j - 1].rgbtRed) + (0 * image[i + 1][j].rgbtRed));
+                Gx[i][j].rgbtGreen = ((-1.0 * image[i - 1][j - 1].rgbtGreen) + (0 * image[i - 1][j].rgbtGreen) + (-2.0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (-1.0 * image[i + 1][j - 1].rgbtGreen) + (0 * image[i + 1][j].rgbtGreen));
+                Gx[i][j].rgbtBlue = ((-1.0 * image[i - 1][j - 1].rgbtBlue) + (0 * image[i - 1][j].rgbtBlue) + (-2.0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (-1.0 * image[i + 1][j - 1].rgbtBlue) + (0 * image[i + 1][j].rgbtBlue));
 
-                Gy[i][j].rgbtRed = round((-1.0 * image[i - 1][j - 1].rgbtRed) + (-2.0 * image[i - 1][j].rgbtRed) + (0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (1.0 * image[i + 1][j - 1].rgbtRed) + (2.0 * image[i + 1][j].rgbtRed));
-                Gy[i][j].rgbtGreen = round((-1.0 * image[i - 1][j - 1].rgbtGreen) + (-2.0 * image[i - 1][j].rgbtGreen) + (0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (1.0 * image[i + 1][j - 1].rgbtGreen) + (2.0 * image[i + 1][j].rgbtGreen));
-                Gy[i][j].rgbtBlue = round((-1.0 * image[i - 1][j - 1].rgbtBlue) + (-2.0 * image[i - 1][j].rgbtBlue) + (0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (1.0 * image[i + 1][j - 1].rgbtBlue) + (2.0 * image[i + 1][j].rgbtBlue));
+                Gy[i][j].rgbtRed = ((-1.0 * image[i - 1][j - 1].rgbtRed) + (-2.0 * image[i - 1][j].rgbtRed) + (0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (1.0 * image[i + 1][j - 1].rgbtRed) + (2.0 * image[i + 1][j].rgbtRed));
+                Gy[i][j].rgbtGreen = ((-1.0 * image[i - 1][j - 1].rgbtGreen) + (-2.0 * image[i - 1][j].rgbtGreen) + (0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (1.0 * image[i + 1][j - 1].rgbtGreen) + (2.0 * image[i + 1][j].rgbtGreen));
+                Gy[i][j].rgbtBlue = ((-1.0 * image[i - 1][j - 1].rgbtBlue) + (-2.0 * image[i - 1][j].rgbtBlue) + (0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (1.0 * image[i + 1][j - 1].rgbtBlue) + (2.0 * image[i + 1][j].rgbtBlue));
             }
             else
             {
-                Gx[i][j].rgbtRed = round((-1.0 * image[i - 1][j - 1].rgbtRed) + (0 * image[i - 1][j].rgbtRed) + (1.0 * image[i - 1][j + 1].rgbtRed) + (-2.0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (2.0 * image[i][j + 1].rgbtRed) + (-1.0 * image[i + 1][j - 1].rgbtRed) + (0 * image[i + 1][j].rgbtRed) + (1.0 * image[i + 1][j + 1].rgbtRed));
-                Gx[i][j].rgbtGreen = round((-1.0 * image[i - 1][j - 1].rgbtGreen) + (0 * image[i - 1][j].rgbtGreen) + (1.0 * image[i - 1][j + 1].rgbtGreen) + (-2.0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (2.0 * image[i][j + 1].rgbtGreen) + (-1.0 * image[i + 1][j - 1].rgbtGreen) + (0 * image[i + 1][j].rgbtGreen) + (1.0 * image[i + 1][j + 1].rgbtGreen));
-                Gx[i][j].rgbtBlue = round((-1.0 * image[i - 1][j - 1].rgbtBlue) + (0 * image[i - 1][j].rgbtBlue) + (1.0 * image[i - 1][j + 1].rgbtBlue) + (-2.0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (2.0 * image[i][j + 1].rgbtBlue) + (-1.0 * image[i + 1][j - 1].rgbtBlue) + (0 * image[i + 1][j].rgbtBlue) + (1.0 * image[i + 1][j + 1].rgbtBlue));
+                Gx[i][j].rgbtRed = ((-1.0 * image[i - 1][j - 1].rgbtRed) + (0 * image[i - 1][j].rgbtRed) + (1.0 * image[i - 1][j + 1].rgbtRed) + (-2.0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (2.0 * image[i][j + 1].rgbtRed) + (-1.0 * image[i + 1][j - 1].rgbtRed) + (0 * image[i + 1][j].rgbtRed) + (1.0 * image[i + 1][j + 1].rgbtRed));
+                Gx[i][j].rgbtGreen = ((-1.0 * image[i - 1][j - 1].rgbtGreen) + (0 * image[i - 1][j].rgbtGreen) + (1.0 * image[i - 1][j + 1].rgbtGreen) + (-2.0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (2.0 * image[i][j + 1].rgbtGreen) + (-1.0 * image[i + 1][j - 1].rgbtGreen) + (0 * image[i + 1][j].rgbtGreen) + (1.0 * image[i + 1][j + 1].rgbtGreen));
+                Gx[i][j].rgbtBlue = ((-1.0 * image[i - 1][j - 1].rgbtBlue) + (0 * image[i - 1][j].rgbtBlue) + (1.0 * image[i - 1][j + 1].rgbtBlue) + (-2.0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (2.0 * image[i][j + 1].rgbtBlue) + (-1.0 * image[i + 1][j - 1].rgbtBlue) + (0 * image[i + 1][j].rgbtBlue) + (1.0 * image[i + 1][j + 1].rgbtBlue));
 
-                Gy[i][j].rgbtRed = round((-1.0 * image[i - 1][j - 1].rgbtRed) + (-2.0 * image[i - 1][j].rgbtRed) + (-1.0 * image[i - 1][j + 1].rgbtRed) + (0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (0 * image[i][j + 1].rgbtRed) + (1.0 * image[i + 1][j - 1].rgbtRed) + (2.0 * image[i + 1][j].rgbtRed) + (1.0 * image[i + 1][j + 1].rgbtRed));
-                Gy[i][j].rgbtGreen = round((-1.0 * image[i - 1][j - 1].rgbtGreen) + (-2.0 * image[i - 1][j].rgbtGreen) + (-1.0 * image[i - 1][j + 1].rgbtGreen) + (0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (0 * image[i][j + 1].rgbtGreen) + (1.0 * image[i + 1][j - 1].rgbtGreen) + (2.0 * image[i + 1][j].rgbtGreen) + (1.0 * image[i + 1][j + 1].rgbtGreen));
-                Gy[i][j].rgbtBlue = round((-1.0 * image[i - 1][j - 1].rgbtBlue) + (-2.0 * image[i - 1][j].rgbtBlue) + (-1.0 * image[i - 1][j + 1].rgbtBlue) + (0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (0 * image[i][j + 1].rgbtBlue) + (1.0 * image[i + 1][j - 1].rgbtBlue) + (2.0 * image[i + 1][j].rgbtBlue) + (1.0 * image[i + 1][j + 1].rgbtBlue));
+                Gy[i][j].rgbtRed = ((-1.0 * image[i - 1][j - 1].rgbtRed) + (-2.0 * image[i - 1][j].rgbtRed) + (-1.0 * image[i - 1][j + 1].rgbtRed) + (0 * image[i][j - 1].rgbtRed) + (0 * image[i][j].rgbtRed) + (0 * image[i][j + 1].rgbtRed) + (1.0 * image[i + 1][j - 1].rgbtRed) + (2.0 * image[i + 1][j].rgbtRed) + (1.0 * image[i + 1][j + 1].rgbtRed));
+                Gy[i][j].rgbtGreen = ((-1.0 * image[i - 1][j - 1].rgbtGreen) + (-2.0 * image[i - 1][j].rgbtGreen) + (-1.0 * image[i - 1][j + 1].rgbtGreen) + (0 * image[i][j - 1].rgbtGreen) + (0 * image[i][j].rgbtGreen) + (0 * image[i][j + 1].rgbtGreen) + (1.0 * image[i + 1][j - 1].rgbtGreen) + (2.0 * image[i + 1][j].rgbtGreen) + (1.0 * image[i + 1][j + 1].rgbtGreen));
+                Gy[i][j].rgbtBlue = ((-1.0 * image[i - 1][j - 1].rgbtBlue) + (-2.0 * image[i - 1][j].rgbtBlue) + (-1.0 * image[i - 1][j + 1].rgbtBlue) + (0 * image[i][j - 1].rgbtBlue) + (0 * image[i][j].rgbtBlue) + (0 * image[i][j + 1].rgbtBlue) + (1.0 * image[i + 1][j - 1].rgbtBlue) + (2.0 * image[i + 1][j].rgbtBlue) + (1.0 * image[i + 1][j + 1].rgbtBlue));
             }
         }
     }
