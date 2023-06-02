@@ -26,9 +26,12 @@ int main(int argc, char *argv[])
 
     // Read header
     // TODO #3
+    WAVHEADER header;
+    fread(header, 1, 44, input);
 
     // Use check_format to ensure WAV format
     // TODO #4
+    check_format(header) == true;
 
     // Open output file for writing
     // TODO #5
@@ -48,6 +51,7 @@ int main(int argc, char *argv[])
 int check_format(WAVHEADER header)
 {
     // TODO #4
+    header[8] = 'W'
     return 0;
 }
 
