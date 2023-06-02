@@ -27,6 +27,7 @@ FILE *file = fopen(argv[1], "r");
 
  while (fread(buffer, 1, 512, file) == 512)
  {
+   //if start of new JPEG
    if ((buffer[0] == 0xff) && (buffer[1] == 0xd8) && (buffer[2] == 0xff) && ((buffer[3] & 0xf0) == 0xe0))
    {
       //if this is the first JPEG
@@ -35,11 +36,17 @@ FILE *file = fopen(argv[1], "r");
          sprintf(image, "%03i.jpg", idx);
          FILE *img = fopen(image, "w");
          fwrite(&buffer, 1, 512, img);
+      //need to close current file and open another file to write into
       else
       {
-         //need to close current file and open another file to write into
-         
+         if ((buffer[0] == 0xff) && (buffer[1] == 0xd8) && (buffer[2] == 0xff) && ((buffer[3] & 0xf0) == 0xe0))
+
       }
+   }
+   //if already found JPEG and need to continue writing into same file
+   else
+   {
+
    }
  }
 }
