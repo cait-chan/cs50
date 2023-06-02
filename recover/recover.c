@@ -9,6 +9,7 @@ int main(int argc, char *argv[])
     return 1;
  }
 
+FILE *file = fopen(argv[1], "r");
  if (fopen(argv[1], "r") == NULL)
  {
     printf("Cannot open file for reading.\n");
@@ -19,19 +20,12 @@ int main(int argc, char *argv[])
 int buffer[512];
 
 //create array to store
-char *image[8];
+char *image = malloc(8 * sizeof(char));
 
-//create array of new JPEG files
-FILE *img[50];
-
-for (int i = 0; i < 50; i++)
-{
-   img[i] = NULL;
-}
+//initialize file pointer for new image files
+FILE *img = NULL;
 
 int idx = 0;
-
-FILE *file = fopen(argv[1], "r");
 
  while (fread(buffer, 1, 512, file) != 0)
  {
@@ -42,33 +36,32 @@ FILE *file = fopen(argv[1], "r");
       if (idx == 0)
       {
          //make new JPEG file to write this data into
-         sprintf(image[idx], "%03i.jpg", idx);
-         img[idx] = fopen(image[idx], "w");
-         fwrite(&buffer, 1, 512, img[idx]);
+         sprintf(image, "%03i.jpg", idx);
+         img = fopen(image, "w");
+         fwrite(&buffer, 1, 512, img);
       }
       //need to close current file and open another file to write into
       else
       {
-         fclose(img[idx]);
+         fclose(img);
          idx++;
 
-         sprintf(image[idx], "%03i.jpg", idx);
-         img[idx] = fopen(image[idx], "w");
-         fwrite(&buffer, 1, 512, img[idx]);
+         sprintf(image, "%03i.jpg", idx);
+         img = fopen(image, "w");
+         fwrite(&buffer, 1, 512, img);
       }
    }
    //if already found JPEG and need to continue writing into same file
    else
    {
-      if (img[idx] != NULL)
+      if (img != NULL)
       {
-         fwrite(&buffer, 1, 512, img[idx]);
+         fwrite(&buffer, 1, 512, img);
       }
    }
  }
- for (int i = 0; i < 50; i++)
- {
-   fclose(img[i]);
- }
- fclose(file);
+free(image);
+
+fclose(img);
+fclose(file);
 }
