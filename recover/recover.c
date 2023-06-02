@@ -45,7 +45,7 @@ int idx = 0;
       img = fopen(image, "w");
    }
    //if already found JPEG and need to continue writing into same file
-   else if (img != NULL)
+   if (img != NULL)
    {
       fwrite(buffer, 1, 512, img);
    }
