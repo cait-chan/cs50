@@ -35,8 +35,6 @@ FILE *file = fopen(argv[1], "r");
          sprintf(image, "%03i.jpg", idx);
          FILE *img = fopen(image, "w");
          fwrite(&buffer, 1, 512, img);
-
-         idx++;
       else
       {
          //need to close current file and open another file to write into
