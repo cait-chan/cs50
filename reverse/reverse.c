@@ -31,13 +31,22 @@ int main(int argc, char *argv[])
 
     // Use check_format to ensure WAV format
     // TODO #4
-    check_format(header) == true;
-
-    // Open output file for writing
-    // TODO #5
+    if (check_format(header) == 1)
+    {
+        // Open output file for writing
+        // TODO #5
+        FILE *output = fopen(argv[2], "w");
+        if (output == NULL)
+        {
+            printf("Unable to open output WAV file\n")
+            return 1;
+        }
+    }
 
     // Write header to file
     // TODO #6
+    
+
 
     // Use get_block_size to calculate size of block
     // TODO #7
@@ -51,11 +60,14 @@ int main(int argc, char *argv[])
 bool check_format(WAVHEADER header)
 {
     // TODO #4
-    if (!(header[8] == 'W' && header[9] == 'A' && header[10] == 'V' && header[11] == 'E'))
+    if ((header[8] == 'W' && header[9] == 'A' && header[10] == 'V' && header[11] == 'E'))
     {
         return 1;
     }
-    return 0;
+    else
+    {
+        return 0;
+    }
 }
 
 int get_block_size(WAVHEADER header)
