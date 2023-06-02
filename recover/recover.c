@@ -29,7 +29,8 @@ FILE *file = fopen(argv[1], "r");
  {
    if ((buffer[0] == 0xff) && (buffer[1] == 0xd8) && (buffer[2] == 0xff) && ((buffer[3] & 0xf0) == 0xe0))
    {
-      if ()
+      //if this is the first JPEG
+      if (idx == 0)
       //make new JPEG file to write this data into
          sprintf(image, "%03i.jpg", idx);
          FILE *img = fopen(image, "w");
@@ -38,6 +39,7 @@ FILE *file = fopen(argv[1], "r");
          idx++;
       else
       {
+         //need to close current file and open another file to write into
          
       }
    }
