@@ -18,12 +18,12 @@ int main(int argc, char *argv[])
 //create buffer to read into
 char buffer[512];
 
-//create array to store 
+//create array to store
 
 FILE *file = fopen(argv[1], "r");
 
  while (fread(buffer, 1, 512, file) == 512)
  {
-
+   if ((buffer[0] == 0xff) && (buffer[1] == 0xd8) && (buffer[2] == 0xff) && (buffer[3] == )
  }
 }
