@@ -39,7 +39,7 @@ FILE *file = fopen(argv[1], "r");
          //make new JPEG file to write this data into
          sprintf(image[idx], "%03i.jpg", idx);
          img[idx] = fopen(image[idx], "w");
-         fwrite(&buffer, 1, 512, img);
+         fwrite(&buffer, 1, 512, img[idx]);
       }
       //need to close current file and open another file to write into
       else
