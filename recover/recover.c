@@ -29,12 +29,17 @@ FILE *file = fopen(argv[1], "r");
  {
    if ((buffer[0] == 0xff) && (buffer[1] == 0xd8) && (buffer[2] == 0xff) && ((buffer[3] & 0xf0) == 0xe0))
    {
+      if ()
       //make new JPEG file to write this data into
-      sprintf(image, "%03i.jpg", idx);
-      FILE *img = fopen(image, "w");
-      fwrite(&buffer, 1, 512, img);
+         sprintf(image, "%03i.jpg", idx);
+         FILE *img = fopen(image, "w");
+         fwrite(&buffer, 1, 512, img);
 
-      idx++;
+         idx++;
+      else
+      {
+         
+      }
    }
  }
 }
