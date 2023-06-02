@@ -55,7 +55,7 @@ FILE *file = fopen(argv[1], "r");
    //if already found JPEG and need to continue writing into same file
    else
    {
-      if (img[idx] != NULL)
+      if ((fopen(image[idx], "w")) != NULL)
       {
          fwrite(&buffer, 1, 512, img[idx]);
       }
