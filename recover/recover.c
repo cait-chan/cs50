@@ -15,10 +15,13 @@ int main(int argc, char *argv[])
     return 1;
  }
 
+//create buffer to read into
+char buffer[512];
+
 FILE *file = fopen(argv[1], "r");
 
  while (fread(buffer, 1, 512, file) == 512)
  {
-
+   
  }
 }
