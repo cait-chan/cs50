@@ -54,12 +54,9 @@ int idx = 0;
       }
    }
    //if already found JPEG and need to continue writing into same file
-   else
+   else if (img != NULL)
    {
-      if (img != NULL)
-      {
-         fwrite(&buffer, 1, 512, img);
-      }
+      fwrite(&buffer, 1, 512, img);
    }
  }
  free(image);
