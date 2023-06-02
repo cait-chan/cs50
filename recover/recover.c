@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
+typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
@@ -17,7 +19,6 @@ FILE *file = fopen(argv[1], "r");
  }
 
 //create buffer to read into
-typedef uint8_t BYTE;
 uint8_t buffer[512];
 
 //create array to store
@@ -39,7 +40,7 @@ int idx = 0;
          //make new JPEG file to write this data into
          sprintf(image, "%03i.jpg", idx);
          img = fopen(image, "w");
-         fwrite(&buffer, 1, 512, img);
+         fwrite(&buffer, 512, 1, img);
       }
       //need to close current file and open another file to write into
       else
@@ -49,7 +50,7 @@ int idx = 0;
 
          sprintf(image, "%03i.jpg", idx);
          img = fopen(image, "w");
-         fwrite(&buffer, 1, 512, img);
+         fwrite(&buffer, 512, 1, img);
       }
    }
    //if already found JPEG and need to continue writing into same file
@@ -57,7 +58,7 @@ int idx = 0;
    {
       if (img != NULL)
       {
-         fwrite(&buffer, 1, 512, img);
+         fwrite(&buffer, 512, 1, img);
       }
    }
  }
