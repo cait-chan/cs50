@@ -30,8 +30,9 @@ FILE *file = fopen(argv[1], "r");
       //make new JPEG file to write this data into
       for (int i = 0; i < 50; i++)
       {
-         sprintf(image1, "%03i.jpg", i);
-         FILE *img = fopen()
+         sprintf(image, "%03i.jpg", i);
+         FILE *img = fopen(image, "w");
+         fwrite()
       }
    }
  }
