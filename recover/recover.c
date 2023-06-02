@@ -32,7 +32,7 @@ FILE *file = fopen(argv[1], "r");
       {
          sprintf(image, "%03i.jpg", i);
          FILE *img = fopen(image, "w");
-         fwrite()
+         fwrite(&buffer, 1, 512, img);
       }
    }
  }
