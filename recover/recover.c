@@ -55,7 +55,7 @@ FILE *file = fopen(argv[1], "r");
    //if already found JPEG and need to continue writing into same file
    else
    {
-      if ()
+      if (img[idx])
    }
  }
  for (int i = 0; i < 50; i++)
