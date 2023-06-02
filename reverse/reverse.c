@@ -48,10 +48,13 @@ int main(int argc, char *argv[])
     fclose(input);
 }
 
-int check_format(WAVHEADER header)
+bool check_format(WAVHEADER header)
 {
     // TODO #4
-    header[8] = 'W'
+    if (!(header[8] == 'W' && header[9] == 'A' && header[10] == 'V' && header[11] == 'E'))
+    {
+        return 1;
+    }
     return 0;
 }
 
