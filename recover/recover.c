@@ -22,7 +22,7 @@ FILE *file = fopen(argv[1], "r");
 uint8_t buffer[512];
 
 //create array to store
-char *image = malloc(8 * sizeof(char));
+char *image[8];
 
 //initialize file pointer for new image files
 FILE *img = NULL;
@@ -40,7 +40,7 @@ int idx = 0;
          fclose(img);
          idx++;
       }
-      
+
       //make new JPEG file to write this data into
       sprintf(image, "%03i.jpg", idx);
       img = fopen(image, "w");
@@ -48,11 +48,13 @@ int idx = 0;
    //if already found JPEG and need to continue writing into same file
    else if (img != NULL)
    {
-      fwrite(buffer, 1, 512, img);
+      fwrite(buffer, sizeof(BYTE)*512, 1, img);
    }
  }
- free(image);
- fclose(img);
+ if (img != NULL)
+ {
+   fclose(img);
+ }
  fclose(file);
 
  return 0;
