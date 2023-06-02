@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     return 1;
  }
 
- if (!fopen(argv[1]))
+ if (fopen(argv[1]) == NULL)
  {
     printf("Cannot open file for reading.\n");
     return 1;
