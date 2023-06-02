@@ -1,67 +1,72 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+
 typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
- if (argc != 2)
- {
-    printf("Usage: ./recover IMAGE\n");
-    return 1;
- }
+    //ensure proper usage
+    if(argc!=2)
+    {
+        fprintf(stderr, "Usage: ./recover infile\n");
+        return 1;
+    }
 
-FILE *file = fopen(argv[1], "r");
- if (fopen(argv[1], "r") == NULL)
- {
-    printf("Cannot open file for reading.\n");
-    return 1;
- }
+    // open input file (forensic image)
+    FILE*inptr=fopen(argv[1], "r");
+    if(inptr==NULL)
+    {
+        fprintf(stderr, "Could not open %s.\n", argv[1]);
+        return 2;
+    }
 
-//create buffer to read into
-uint8_t buffer[512];
+    //set outfile pointer to NULL
+    FILE* outptr = NULL;
 
-//create array to store
-char *image = malloc(8 * sizeof(char));
+   //create an array of 512 elements to store 512 bytes from the memory card
+    BYTE buffer[512];
 
-//initialize file pointer for new image files
-FILE *img = NULL;
+    //count amount of jpeg files found
+    int jpeg=0;
 
-int idx = 0;
+    //string to hold a filename
+    char filename[8]={0};
 
- while (fread(buffer, 1, 512, file))
- {
-   //if start of new JPEG
-   if ((buffer[0] == 0xff) && (buffer[1] == 0xd8) && (buffer[2] == 0xff) && ((buffer[3] & 0xf0) == 0xe0))
-   {
-      //if this is the first JPEG
-      if (idx == 0)
-      {
-         //make new JPEG file to write this data into
-         sprintf(image, "%03i.jpg", idx);
-         img = fopen(image, "w");
-         fwrite(buffer, 1, 512, img);
-      }
-      //need to close current file and open another file to write into
-      else
-      {
-         fclose(img);
-         idx++;
+    //read memory card untill the end of file
+    while(fread(buffer, sizeof(BYTE)*512, 1, inptr)==1)
+    {
+        //check if jpeg is found
+        if(buffer[0]==0xFF&&buffer[1]==0xD8&&buffer[2]==0xFF&&(buffer[3]&0xF0)==0xE0)
+        {
+            //close outptr if jpeg was found before and written into ###.jpg
+            if(outptr != NULL)
+            {
+                fclose(outptr);
+            }
+                sprintf(filename, "%03d.jpg", jpeg++);
 
-         sprintf(image, "%03i.jpg", idx);
-         img = fopen(image, "w");
-         fwrite(buffer, 1, 512, img);
-      }
-   }
-   //if already found JPEG and need to continue writing into same file
-   else if (img != NULL)
-   {
-      fwrite(buffer, 1, 512, img);
-   }
- }
- free(image);
- fclose(img);
- fclose(file);
+                //open a new outptr for writing a new found jpeg
+                outptr = fopen(filename, "w");
+        }
 
- return 0;
+       //keep writing to jpeg file if new jpeg is not found
+       if(outptr != NULL)
+       {
+            fwrite(buffer, sizeof(BYTE)*512, 1, outptr);
+       }
+    }
+
+
+    // close last opened outptr
+     if (outptr != NULL)
+     {
+      fclose(outptr);
+     }
+
+    //close input file (forensic image)
+      fclose(inptr);
+
+    return 0;
+
 }
