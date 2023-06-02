@@ -21,6 +21,9 @@ int buffer[512];
 //create array to store
 char *image[8];
 
+//create array of new JPEG files
+FILE *img[50];
+
 int idx = 0;
 
 FILE *file = fopen(argv[1], "r");
@@ -30,9 +33,6 @@ FILE *file = fopen(argv[1], "r");
    //if start of new JPEG
    if ((buffer[0] == 0xff) && (buffer[1] == 0xd8) && (buffer[2] == 0xff) && ((buffer[3] & 0xf0) == 0xe0))
    {
-      //create array of new JPEG files
-      FILE *img[50];
-      
       //if this is the first JPEG
       if (idx == 0)
       {
@@ -55,7 +55,7 @@ FILE *file = fopen(argv[1], "r");
    //if already found JPEG and need to continue writing into same file
    else
    {
-      if ((fopen(image[idx], "w")) != NULL)
+      if (ftell(img[idx]) >= 0)
       {
          fwrite(&buffer, 1, 512, img[idx]);
       }
