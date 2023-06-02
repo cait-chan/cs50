@@ -5,7 +5,7 @@ int main(int argc, char *argv[])
 {
  if (argc != 2)
  {
-    printf("Please enter only one command-line argument.\n");
+    printf("Usage: ./recover file\n");
     return 1;
  }
 
