@@ -39,14 +39,13 @@ FILE *file = fopen(argv[1], "r");
       //need to close current file and open another file to write into
       else
       {
-         if ((buffer[0] == 0xff) && (buffer[1] == 0xd8) && (buffer[2] == 0xff) && ((buffer[3] & 0xf0) == 0xe0))
 
       }
    }
    //if already found JPEG and need to continue writing into same file
    else
    {
-
+      
    }
  }
 }
