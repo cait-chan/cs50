@@ -26,7 +26,7 @@ FILE *img[50];
 
 for (int i = 0; i < 50; i++)
 {
-   
+   img[i] = NULL;
 }
 
 int idx = 0;
