@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
  }
 
 FILE *file = fopen(argv[1], "r");
- if (fopen(argv[1], "r") == NULL)
+ if (file == NULL)
  {
     printf("Cannot open file for reading.\n");
     return 1;
