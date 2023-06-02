@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 
     // Write header to file
     // TODO #6
-
+    fwrite(&header, 1, 44, output);
 
 
     // Use get_block_size to calculate size of block
@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 int check_format(WAVHEADER header)
 {
     // TODO #4
-    if (!(header[8] == 'W' && header[9] == 'A' && header[10] == 'V' && header[11] == 'E'))
+    if (!(header.format[0] == 'W' && header.format[1] == 'A' && header.format[2] == 'V' && header.format[3] == 'E'))
     {
         return 1;
     }
