@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
 char buffer[512];
 
 //create array to store
+char *image[512];
 
 FILE *file = fopen(argv[1], "r");
 
