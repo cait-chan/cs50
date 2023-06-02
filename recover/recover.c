@@ -47,7 +47,7 @@ int idx = 0;
    //if already found JPEG and need to continue writing into same file
    else if (img != NULL)
    {
-      fwrite(buffer, sizeof(BYTE)*512, 1, img);
+      fwrite(buffer, 1, 512, img);
    }
  }
  if (img != NULL)
