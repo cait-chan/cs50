@@ -35,8 +35,11 @@ int idx = 0;
    if ((buffer[0] == 0xff) && (buffer[1] == 0xd8) && (buffer[2] == 0xff) && ((buffer[3] & 0xf0) == 0xe0))
    {
       //if this is the first JPEG
-      if (idx == 0)
+      if (img != NULL)
       {
+         fclose(img);
+         idx++;
+
          //make new JPEG file to write this data into
          sprintf(image, "%03i.jpg", idx);
          img = fopen(image, "w");
@@ -45,8 +48,6 @@ int idx = 0;
       //need to close current file and open another file to write into
       else
       {
-         fclose(img);
-         idx++;
 
          sprintf(image, "%03i.jpg", idx);
          img = fopen(image, "w");
