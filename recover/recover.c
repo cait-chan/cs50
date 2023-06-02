@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 int buffer[512];
 
 //create array to store
-char *image[50];
+char *image[8];
 
 //create array of new JPEG files
 FILE *img[50];
