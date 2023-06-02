@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 char buffer[512];
 
 //create array to store
-char *image[512];
+char *image[50];
 
 int idx = 0;
 
@@ -33,9 +33,9 @@ FILE *file = fopen(argv[1], "r");
       //if this is the first JPEG
       if (idx == 0)
       //make new JPEG file to write this data into
-         sprintf(image, "%03i.jpg", idx);
-         FILE *img = fopen(image, "w");
-         fwrite(&buffer, 1, 512, img);
+         sprintf(image[idx], "%03i.jpg", idx);
+         FILE *img[idx] = fopen(image[idx], "w");
+         fwrite(&buffer, 1, 512, img[idx]);
       //need to close current file and open another file to write into
       else
       {
@@ -45,7 +45,7 @@ FILE *file = fopen(argv[1], "r");
    //if already found JPEG and need to continue writing into same file
    else
    {
-      
+
    }
  }
 }
