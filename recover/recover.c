@@ -22,14 +22,14 @@ FILE *file = fopen(argv[1], "r");
 BYTE buffer[512];
 
 //create array to store
-char *image = malloc(8);
+char image[8] = {0};
 
 //initialize file pointer for new image files
 FILE *img = NULL;
 
 int idx = 0;
 
- while (fread(buffer, 1, 512, file))
+ while (fread(buffer, 1, 512, file) == 512)
  {
    //if start of new JPEG
    if ((buffer[0] == 0xff) && (buffer[1] == 0xd8) && (buffer[2] == 0xff) && ((buffer[3] & 0xf0) == 0xe0))
@@ -56,7 +56,6 @@ int idx = 0;
    fclose(img);
  }
  fclose(file);
- free(image);
 
  return 0;
 }
