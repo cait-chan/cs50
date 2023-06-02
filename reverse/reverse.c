@@ -41,12 +41,11 @@ int main(int argc, char *argv[])
             printf("Unable to open output WAV file\n");
             return 1;
         }
+
+        // Write header to file
+        // TODO #6
+        fwrite(&header, 1, 44, output);
     }
-
-    // Write header to file
-    // TODO #6
-    fwrite(&header, 1, 44, output);
-
 
     // Use get_block_size to calculate size of block
     // TODO #7
