@@ -19,7 +19,7 @@ FILE *file = fopen(argv[1], "r");
  }
 
 //create buffer to read into
-uint8_t buffer[512];
+BYTE buffer[512];
 
 //create array to store
 char *image = malloc(8);
