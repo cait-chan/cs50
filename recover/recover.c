@@ -27,7 +27,11 @@ FILE *file = fopen(argv[1], "r");
    if ((buffer[0] == 0xff) && (buffer[1] == 0xd8) && (buffer[2] == 0xff) && ((buffer[3] & 0xf0) == 0xe0))
    {
       //make new JPEG file to write this data into
-      sprintf()
+      for (int i = 0; i < 50; i++)
+      {
+         sprintf(image1, "%03i.jpg", i);
+         FILE *img = fopen()
+      }
    }
  }
 }
