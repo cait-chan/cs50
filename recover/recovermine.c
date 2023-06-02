@@ -40,9 +40,10 @@ int idx = 0;
          fclose(img);
          idx++;
       }
-         //make new JPEG file to write this data into
-         sprintf(image, "%03i.jpg", idx);
-         img = fopen(image, "w");
+      
+      //make new JPEG file to write this data into
+      sprintf(image, "%03i.jpg", idx);
+      img = fopen(image, "w");
    }
    //if already found JPEG and need to continue writing into same file
    else if (img != NULL)
