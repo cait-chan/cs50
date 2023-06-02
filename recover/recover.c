@@ -33,7 +33,7 @@ int idx = 0;
 
 FILE *file = fopen(argv[1], "r");
 
- while (fread(buffer, 1, 512, file) == 512)
+ while (fread(buffer, 1, 512, file) != 0)
  {
    //if start of new JPEG
    if ((buffer[0] == 0xff) && (buffer[1] == 0xd8) && (buffer[2] == 0xff) && ((buffer[3] & 0xf0) == 0xe0))
