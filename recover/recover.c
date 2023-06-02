@@ -18,10 +18,12 @@ int main(int argc, char *argv[])
 //create buffer to read into
 char buffer[512];
 
+//create array to store 
+
 FILE *file = fopen(argv[1], "r");
 
  while (fread(buffer, 1, 512, file) == 512)
  {
-   
+
  }
 }
