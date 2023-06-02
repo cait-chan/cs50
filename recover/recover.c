@@ -40,7 +40,7 @@ int idx = 0;
          //make new JPEG file to write this data into
          sprintf(image, "%03i.jpg", idx);
          img = fopen(image, "w");
-         fwrite(&buffer, 1, 512, img);
+         fwrite(buffer, 1, 512, img);
       }
       //need to close current file and open another file to write into
       else
@@ -50,13 +50,13 @@ int idx = 0;
 
          sprintf(image, "%03i.jpg", idx);
          img = fopen(image, "w");
-         fwrite(&buffer, 1, 512, img);
+         fwrite(buffer, 1, 512, img);
       }
    }
    //if already found JPEG and need to continue writing into same file
    else if (img != NULL)
    {
-      fwrite(&buffer, 1, 512, img);
+      fwrite(buffer, 1, 512, img);
    }
  }
  free(image);
