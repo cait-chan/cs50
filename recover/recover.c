@@ -17,7 +17,8 @@ FILE *file = fopen(argv[1], "r");
  }
 
 //create buffer to read into
-int buffer[512];
+typedef uint8_t BYTE;
+uint8_t buffer[512];
 
 //create array to store
 char *image = malloc(8 * sizeof(char));
@@ -60,8 +61,9 @@ int idx = 0;
       }
    }
  }
-free(image);
+ free(image);
+ fclose(img);
+ fclose(file);
 
-fclose(img);
-fclose(file);
+ return 0;
 }
