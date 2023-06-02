@@ -22,7 +22,7 @@ FILE *file = fopen(argv[1], "r");
 BYTE buffer[512];
 
 //create array to store
-char *image = malloc (8);
+char image[8] = {0};
 
 //initialize file pointer for new image files
 FILE *img = NULL;
@@ -55,7 +55,6 @@ int idx = 0;
    fclose(img);
  }
  fclose(file);
- free(image);
 
  return 0;
 }
