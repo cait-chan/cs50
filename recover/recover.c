@@ -34,11 +34,11 @@ FILE *file = fopen(argv[1], "r");
       if (idx == 0)
       {
          //create array of new JPEG files
-         FILE *image[50];
+         FILE *img[50];
 
          //make new JPEG file to write this data into
          sprintf(image[idx], "%03i.jpg", idx);
-         image[idx] = fopen(image[idx], "w");
+         img[idx] = fopen(image[idx], "w");
          fwrite(&buffer, 1, 512, img);
       }
       //need to close current file and open another file to write into
@@ -58,6 +58,9 @@ FILE *file = fopen(argv[1], "r");
       fwrite(&buffer, 1, 512, img[idx]);
    }
  }
- fclose(img[idx]);
+ for (int i = 0; i < 50; i++)
+ {
+   fclose(img[i]);
+ }
  fclose(file);
 }
