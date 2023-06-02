@@ -21,6 +21,8 @@ char buffer[512];
 //create array to store
 char *image[512];
 
+int idx = 0;
+
 FILE *file = fopen(argv[1], "r");
 
  while (fread(buffer, 1, 512, file) == 512)
@@ -28,12 +30,11 @@ FILE *file = fopen(argv[1], "r");
    if ((buffer[0] == 0xff) && (buffer[1] == 0xd8) && (buffer[2] == 0xff) && ((buffer[3] & 0xf0) == 0xe0))
    {
       //make new JPEG file to write this data into
-      for (int i = 0; i < 50; i++)
-      {
-         sprintf(image, "%03i.jpg", i);
-         FILE *img = fopen(image, "w");
-         fwrite(&buffer, 1, 512, img);
-      }
+      sprintf(image, "%03i.jpg", idx);
+      FILE *img = fopen(image, "w");
+      fwrite(&buffer, 1, 512, img);
+
+      idx++;
    }
  }
 }
