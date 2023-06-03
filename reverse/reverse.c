@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     FILE *input = fopen(argv[1], "r");
     if (input == NULL)
     {
-        printf("Unable to open input.wav file\n");
+        printf("Input is not a WAV file.\n");
         return 1;
     }
 
