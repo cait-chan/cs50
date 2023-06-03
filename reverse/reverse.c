@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     // Ensure proper usage
     if (argc != 3)
     {
-        printf("Usage: ./reverse input.WAV output.WAV\n");
+        printf("Usage: ./reverse input.wav output.wav\n");
         return 1;
     }
 
@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     FILE *input = fopen(argv[1], "r");
     if (input == NULL)
     {
-        printf("Unable to open input WAV file\n");
+        printf("Unable to open input.wav file\n");
         return 1;
     }
 
@@ -55,12 +55,13 @@ int main(int argc, char *argv[])
         //declare array to store each block we read in
         int buffer[block_size];
 
-        fseek(buffer, -block_size, SEEK_END);
+        fseek(input, -block_size, SEEK_END);
         while (fread(buffer, 1, block_size, input))
         {
-            fseek(buffer, (2 * -block_size), SEEK_CUR);
             fwrite(buffer, 1, block_size, output);
+            fseek(input, (2 * -block_size), SEEK_CUR);
         }
+
         fclose(input);
         fclose(output);
     }
