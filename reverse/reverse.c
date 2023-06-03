@@ -45,27 +45,26 @@ int main(int argc, char *argv[])
         // Write header to file
         // TODO #6
         fwrite(&header, 1, 44, output);
+
+        // Use get_block_size to calculate size of block
+        // TODO #7
+        int block_size = get_block_size(header);
+
+        // Write reversed audio to file
+        // TODO #8
+        //declare array to store each block we read in
+        char *block[];
+        int buffer[block_size];
+
+        fseek(buffer, -block_size, SEEK_END);
+        while (fread(buffer, 1, block_size, input))
+        {
+            fseek(buffer, (2 * -block_size), SEEK_CUR);
+            fwrite(buffer, 1, block_size, output);
+        }
+        fclose(input);
+        fclose(output);
     }
-
-    // Use get_block_size to calculate size of block
-    // TODO #7
-    int block_size = get_block_size(header);
-
-    // Write reversed audio to file
-    // TODO #8
-    //declare array to store each block we read in
-    char *block[];
-    int buffer[block_size];
-
-    fseek(buffer, -block_size, SEEK_END);
-    while (fread(buffer, 1, block_size, input))
-    {
-        fseek(buffer, (2 * -block_size), SEEK_CUR);
-        fwrite(buffer, 1, block_size, output);
-    }
-
-    fclose(input);
-    fclose(output);
 }
 
 int check_format(WAVHEADER header)
