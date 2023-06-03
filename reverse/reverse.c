@@ -62,7 +62,6 @@ int main(int argc, char *argv[])
     {
         fseek(buffer, (2 * -block_size), SEEK_CUR);
         fwrite(buffer, 1, block_size, output);
-
     }
 
     fclose(input);
