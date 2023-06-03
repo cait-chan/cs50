@@ -54,6 +54,7 @@ int main(int argc, char *argv[])
     // Write reversed audio to file
     // TODO #8
         //declare array to store each block we read in
+        char *block[];
 
     fclose(input);
     fclose(output);
