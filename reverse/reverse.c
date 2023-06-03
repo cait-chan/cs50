@@ -57,9 +57,10 @@ int main(int argc, char *argv[])
     char *block[];
     int buffer[block_size];
 
+    fseek(buffer, -block_size, SEEK_END);
     while (fread(buffer, 1, block_size, input))
     {
-        fseek(buffer, -block_size, SEEK_END);
+        fseek(buffer, (2 * -block_size), SEEK_CUR);
         fwrite(buffer, 1, block_size, output);
 
     }
