@@ -32,39 +32,38 @@ int main(int argc, char *argv[])
     // Use check_format to ensure WAV format
     // TODO #4
     if (check_format(header) == 0)
+
+    // Open output file for writing
+    // TODO #5
+    FILE *output = fopen(argv[2], "w");
+    if (output == NULL)
     {
-        // Open output file for writing
-        // TODO #5
-        FILE *output = fopen(argv[2], "w");
-        if (output == NULL)
-        {
-            printf("Unable to open output WAV file\n");
-            return 1;
-        }
-
-        // Write header to file
-        // TODO #6
-        fwrite(&header, 1, 44, output);
-
-        // Use get_block_size to calculate size of block
-        // TODO #7
-        int block_size = get_block_size(header);
-
-        // Write reversed audio to file
-        // TODO #8
-        //declare array to store each block we read in
-        int buffer[block_size];
-
-        fseek(input, -block_size, SEEK_END);
-        while (fread(buffer, 1, block_size, input))
-        {
-            fwrite(buffer, 1, block_size, output);
-            fseek(input, (2 * -block_size), SEEK_CUR);
-        }
-
-        fclose(input);
-        fclose(output);
+        printf("Unable to open output WAV file\n");
+        return 1;
     }
+
+    // Write header to file
+    // TODO #6
+    fwrite(&header, 1, 44, output);
+
+    // Use get_block_size to calculate size of block
+    // TODO #7
+    int block_size = get_block_size(header);
+
+    // Write reversed audio to file
+    // TODO #8
+    //declare array to store each block we read in
+    int buffer[block_size];
+
+    fseek(input, -block_size, SEEK_END);
+    while (fread(buffer, 1, block_size, input))
+    {
+        fwrite(buffer, 1, block_size, output);
+        fseek(input, (2 * -block_size), SEEK_CUR);
+    }
+
+    fclose(input);
+    fclose(output);
 }
 
 int check_format(WAVHEADER header)
