@@ -55,9 +55,13 @@ int main(int argc, char *argv[])
     // TODO #8
     //declare array to store each block we read in
     char *block[];
-    int buffer;
+    int buffer[block_size];
 
-    while (fread(buffer))
+    while (fread(buffer, 1, block_size, input))
+    {
+        fwrite(buffer, 1, block_size, output)
+        
+    }
 
     fclose(input);
     fclose(output);
